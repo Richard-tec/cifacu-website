@@ -1,29 +1,44 @@
 "use client";
 
-import { FormEvent, useState } from "react";
+import { useActionState, useEffect, useState } from "react";
+import { useFormStatus } from "react-dom";
 import { useRouter } from "next/navigation";
+import { loginAdmin, type LoginState } from "@/app/admin/actions/auth";
+
+const initialState: LoginState = {
+  message: "",
+  status: "idle",
+};
+
+function LoginButton() {
+  const { pending } = useFormStatus();
+
+  return (
+    <button
+      className="mt-8 inline-flex w-full items-center justify-center rounded-md bg-[#6f1725] px-6 py-4 text-sm font-black uppercase tracking-[0.08em] text-white shadow-xl shadow-[#4d0e19]/18 transition hover:-translate-y-0.5 hover:bg-[#4d0e19] focus:outline-none focus:ring-4 focus:ring-[#f6c84c]/50 disabled:cursor-not-allowed disabled:opacity-70"
+      disabled={pending}
+      type="submit"
+    >
+      {pending ? "Checking Access..." : "Open Dashboard"}
+    </button>
+  );
+}
 
 export function AdminLoginForm() {
   const router = useRouter();
   const [error, setError] = useState("");
+  const [state, formAction] = useActionState(loginAdmin, initialState);
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    const form = event.currentTarget;
-
-    if (!form.checkValidity()) {
-      form.reportValidity();
-      return;
+  useEffect(() => {
+    if (state.status === "success") {
+      router.push("/admin/dashboard");
     }
-
-    setError("");
-    router.push("/admin/dashboard");
-  }
+  }, [router, state.status]);
 
   return (
     <form
       className="rounded-lg border border-white/12 bg-white p-6 text-[#211718] shadow-2xl shadow-black/25 sm:p-8"
-      onSubmit={handleSubmit}
+      action={formAction}
     >
       <div className="mb-8">
         <p className="text-sm font-black uppercase tracking-[0.18em] text-[#8a1d2d]">
@@ -38,9 +53,16 @@ export function AdminLoginForm() {
         </p>
       </div>
 
-      {error ? (
-        <div className="mb-5 rounded-md border border-[#8a1d2d]/25 bg-[#fff1f3] px-4 py-3 text-sm font-bold text-[#8a1d2d]">
-          {error}
+      {error || state.message ? (
+        <div
+          className={`mb-5 rounded-md border px-4 py-3 text-sm font-bold ${
+            state.status === "success"
+              ? "border-[#f6c84c]/60 bg-[#fff8df] text-[#5b111d]"
+              : "border-[#8a1d2d]/25 bg-[#fff1f3] text-[#8a1d2d]"
+          }`}
+          role="status"
+        >
+          {error || state.message}
         </div>
       ) : null}
 
@@ -69,7 +91,7 @@ export function AdminLoginForm() {
 
       <div className="mt-5 flex items-center justify-between gap-4 text-sm">
         <label className="flex items-center gap-2 font-semibold text-[#5b5051]">
-          <input className="size-4 accent-[#8a1d2d]" type="checkbox" />
+          <input className="size-4 accent-[#8a1d2d]" name="remember" type="checkbox" />
           Remember device
         </label>
         <button
@@ -81,12 +103,7 @@ export function AdminLoginForm() {
         </button>
       </div>
 
-      <button
-        className="mt-8 inline-flex w-full items-center justify-center rounded-md bg-[#6f1725] px-6 py-4 text-sm font-black uppercase tracking-[0.08em] text-white shadow-xl shadow-[#4d0e19]/18 transition hover:-translate-y-0.5 hover:bg-[#4d0e19] focus:outline-none focus:ring-4 focus:ring-[#f6c84c]/50"
-        type="submit"
-      >
-        Open Dashboard
-      </button>
+      <LoginButton />
     </form>
   );
 }

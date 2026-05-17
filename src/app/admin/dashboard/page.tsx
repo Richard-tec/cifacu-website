@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { logoutAdmin } from "@/app/admin/actions/auth";
 
 const stats = [
   { label: "Total Members", value: "2,486", change: "+148 this month" },
@@ -98,12 +99,14 @@ export default function AdminDashboardPage() {
                 <span className="text-sm font-bold">Admin Panel</span>
               </span>
             </Link>
-            <Link
-              className="rounded-md border border-white/15 px-3 py-2 text-xs font-black text-white/78 transition hover:text-[#f6c84c] lg:hidden"
-              href="/admin"
-            >
-              Logout
-            </Link>
+            <form action={logoutAdmin} className="lg:hidden">
+              <button
+                className="rounded-md border border-white/15 px-3 py-2 text-xs font-black text-white/78 transition hover:text-[#f6c84c]"
+                type="submit"
+              >
+                Logout
+              </button>
+            </form>
           </div>
 
           <nav className="grid gap-1 px-4 py-5">
@@ -138,12 +141,14 @@ export default function AdminDashboardPage() {
                 >
                   View Site
                 </Link>
-                <Link
-                  className="hidden rounded-md bg-[#6f1725] px-4 py-3 text-sm font-black text-white shadow-sm transition hover:bg-[#4d0e19] lg:inline-flex"
-                  href="/admin"
-                >
-                  Logout
-                </Link>
+                <form action={logoutAdmin} className="hidden lg:block">
+                  <button
+                    className="rounded-md bg-[#6f1725] px-4 py-3 text-sm font-black text-white shadow-sm transition hover:bg-[#4d0e19]"
+                    type="submit"
+                  >
+                    Logout
+                  </button>
+                </form>
               </div>
             </div>
           </header>
