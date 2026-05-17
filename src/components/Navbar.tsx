@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 const menuItems = [
@@ -14,6 +15,11 @@ const menuItems = [
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
+
+  if (pathname.startsWith("/admin")) {
+    return null;
+  }
 
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-[#6f1725]/95 text-white shadow-lg shadow-black/10 backdrop-blur-xl">
