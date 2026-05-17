@@ -274,58 +274,6 @@ export default function Home() {
         </div>
       </section>
 
-      <footer id="contact" className="bg-[#5b111d] text-white">
-        <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-[1.2fr_0.8fr_0.8fr] lg:px-8">
-          <div>
-            <p className="text-sm font-black uppercase tracking-[0.2em] text-[#f6c84c]">
-              CIFACU
-            </p>
-            <h2 className="mt-3 text-2xl font-black">
-              Citizens Forum Against Corruption in Uganda
-            </h2>
-            <p className="mt-4 max-w-md leading-7 text-white/70">
-              Contact: info@cifacu.org | +256 700 000 000
-              <br />
-              Kampala, Uganda
-            </p>
-          </div>
-          <div>
-            <h3 className="font-black text-[#f6c84c]">Quick Links</h3>
-            <div className="mt-4 grid gap-3 text-sm font-semibold text-white/75">
-              <a href="#about" className="transition hover:text-white">
-                About
-              </a>
-              <a href="#join" className="transition hover:text-white">
-                Membership
-              </a>
-              <a href="#activities" className="transition hover:text-white">
-                Activities
-              </a>
-              <a href="#leadership" className="transition hover:text-white">
-                Leadership
-              </a>
-            </div>
-          </div>
-          <div>
-            <h3 className="font-black text-[#f6c84c]">Social Media</h3>
-            <div className="mt-4 flex flex-wrap gap-3">
-              {["Facebook", "X", "LinkedIn"].map((item) => (
-                <a
-                  key={item}
-                  href="#"
-                  className="rounded-md border border-white/15 px-4 py-2 text-sm font-bold text-white/80 transition hover:border-[#f6c84c] hover:text-[#f6c84c]"
-                >
-                  {item}
-                </a>
-              ))}
-            </div>
-          </div>
-        </div>
-        <div className="border-t border-white/10 px-4 py-5 text-center text-sm text-white/60">
-          &copy; 2026 Citizens Forum Against Corruption in Uganda. Me &amp; You
-          Against Corruption.
-        </div>
-      </footer>
     </main>
   );
 }
