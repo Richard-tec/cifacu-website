@@ -1,7 +1,12 @@
 "use client";
 
-import { FormEvent, useState } from "react";
+import { useActionState, useEffect, useRef } from "react";
+import { useFormStatus } from "react-dom";
 import type { ReactNode } from "react";
+import {
+  createMember,
+  type RegistrationState,
+} from "@/app/register/actions/createMember";
 
 type IconName = "user" | "id" | "phone" | "mail" | "location" | "briefcase";
 
@@ -56,34 +61,51 @@ function Label({
   );
 }
 
+const initialState: RegistrationState = {
+  message: "",
+  status: "idle",
+};
+
+function SubmitButton() {
+  const { pending } = useFormStatus();
+
+  return (
+    <button
+      className="mt-8 inline-flex w-full items-center justify-center rounded-md bg-[#6f1725] px-6 py-4 text-base font-black text-white shadow-xl shadow-[#4d0e19]/20 transition hover:-translate-y-0.5 hover:bg-[#4d0e19] focus:outline-none focus:ring-4 focus:ring-[#f6c84c]/50 disabled:cursor-not-allowed disabled:opacity-70 sm:w-auto"
+      disabled={pending}
+      type="submit"
+    >
+      {pending ? "Submitting Registration..." : "Submit Membership Registration"}
+    </button>
+  );
+}
+
 export function MembershipRegistrationForm() {
-  const [submitted, setSubmitted] = useState(false);
+  const [state, formAction] = useActionState(createMember, initialState);
+  const formRef = useRef<HTMLFormElement>(null);
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    const form = event.currentTarget;
-
-    if (!form.checkValidity()) {
-      form.reportValidity();
-      return;
+  useEffect(() => {
+    if (state.status === "success") {
+      formRef.current?.reset();
     }
-
-    setSubmitted(true);
-    form.reset();
-  }
+  }, [state.status]);
 
   return (
     <form
-      onSubmit={handleSubmit}
+      action={formAction}
       className="rounded-lg border border-[#6f1725]/10 bg-white p-5 shadow-2xl shadow-[#4d0e19]/10 sm:p-8"
+      ref={formRef}
     >
-      {submitted ? (
+      {state.message ? (
         <div
-          className="mb-6 rounded-md border border-[#f6c84c]/50 bg-[#fff8df] px-4 py-3 text-sm font-bold text-[#5b111d]"
+          className={`mb-6 rounded-md border px-4 py-3 text-sm font-bold ${
+            state.status === "success"
+              ? "border-[#f6c84c]/50 bg-[#fff8df] text-[#5b111d]"
+              : "border-[#8a1d2d]/30 bg-[#fff1f3] text-[#8a1d2d]"
+          }`}
           role="status"
         >
-          Registration received for review. A forum representative can contact
-          the applicant after verification.
+          {state.message}
         </div>
       ) : null}
 
@@ -224,12 +246,7 @@ export function MembershipRegistrationForm() {
         </label>
       </section>
 
-      <button
-        className="mt-8 inline-flex w-full items-center justify-center rounded-md bg-[#6f1725] px-6 py-4 text-base font-black text-white shadow-xl shadow-[#4d0e19]/20 transition hover:-translate-y-0.5 hover:bg-[#4d0e19] focus:outline-none focus:ring-4 focus:ring-[#f6c84c]/50 sm:w-auto"
-        type="submit"
-      >
-        Submit Membership Registration
-      </button>
+      <SubmitButton />
     </form>
   );
 }
