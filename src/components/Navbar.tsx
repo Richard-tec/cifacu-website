@@ -7,9 +7,9 @@ import { useState } from "react";
 const menuItems = [
   { label: "Home", href: "/" },
   { label: "About", href: "/#about" },
-  { label: "Membership", href: "/#join" },
+  { label: "Join Movement", href: "/register" },
   { label: "Activities", href: "/activities" },
-  { label: "Leadership", href: "/#leadership" },
+  { label: "Youth Programs", href: "/activities" },
   { label: "Contact", href: "/#contact" },
 ];
 
