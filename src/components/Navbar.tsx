@@ -5,8 +5,9 @@ import { useState } from "react";
 const menuItems = [
   { label: "Home", href: "#" },
   { label: "About", href: "#about" },
+  { label: "Membership", href: "#join" },
   { label: "Activities", href: "#activities" },
-  { label: "Join Movement", href: "#join" },
+  { label: "Leadership", href: "#leadership" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -14,7 +15,7 @@ export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-[#6f1725] text-white shadow-lg shadow-black/10">
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-[#6f1725]/95 text-white shadow-lg shadow-black/10 backdrop-blur-xl">
       <nav
         aria-label="Primary navigation"
         className="mx-auto flex min-h-20 w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8"
@@ -31,7 +32,7 @@ export function Navbar() {
             <span className="text-sm font-bold uppercase tracking-[0.16em] text-[#f6c84c]">
               CIFACU
             </span>
-            <span className="max-w-48 text-sm font-semibold text-white sm:max-w-none">
+            <span className="max-w-44 text-sm font-semibold text-white sm:max-w-none">
               Citizens Forum Against Corruption
             </span>
           </span>
@@ -42,7 +43,7 @@ export function Navbar() {
             <a
               key={item.label}
               href={item.href}
-              className="rounded-md px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/10 hover:text-[#f6c84c] focus:outline-none focus:ring-2 focus:ring-[#f6c84c] focus:ring-offset-2 focus:ring-offset-[#6f1725]"
+              className="rounded-md px-3 py-2 text-sm font-semibold text-white transition hover:bg-white/10 hover:text-[#f6c84c] focus:outline-none focus:ring-2 focus:ring-[#f6c84c] focus:ring-offset-2 focus:ring-offset-[#6f1725]"
             >
               {item.label}
             </a>
