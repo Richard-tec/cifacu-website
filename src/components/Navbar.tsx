@@ -1,14 +1,15 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 
 const menuItems = [
-  { label: "Home", href: "#" },
-  { label: "About", href: "#about" },
-  { label: "Membership", href: "#join" },
-  { label: "Activities", href: "#activities" },
-  { label: "Leadership", href: "#leadership" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "/" },
+  { label: "About", href: "/#about" },
+  { label: "Membership", href: "/#join" },
+  { label: "Activities", href: "/#activities" },
+  { label: "Leadership", href: "/#leadership" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 export function Navbar() {
@@ -20,8 +21,8 @@ export function Navbar() {
         aria-label="Primary navigation"
         className="mx-auto flex min-h-20 w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8"
       >
-        <a
-          href="#"
+        <Link
+          href="/"
           className="flex items-center gap-3"
           aria-label="Citizens Forum Against Corruption home"
         >
@@ -36,26 +37,26 @@ export function Navbar() {
               Citizens Forum Against Corruption
             </span>
           </span>
-        </a>
+        </Link>
 
         <div className="hidden items-center gap-1 lg:flex">
           {menuItems.map((item) => (
-            <a
+            <Link
               key={item.label}
               href={item.href}
               className="rounded-md px-3 py-2 text-sm font-semibold text-white transition hover:bg-white/10 hover:text-[#f6c84c] focus:outline-none focus:ring-2 focus:ring-[#f6c84c] focus:ring-offset-2 focus:ring-offset-[#6f1725]"
             >
               {item.label}
-            </a>
+            </Link>
           ))}
         </div>
 
-        <a
-          href="#join"
+        <Link
+          href="/register"
           className="hidden rounded-md bg-[#f6c84c] px-5 py-3 text-sm font-bold text-[#4f0f1a] shadow-sm transition hover:bg-white hover:text-[#6f1725] focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#6f1725] lg:inline-flex"
         >
           Join the Movement
-        </a>
+        </Link>
 
         <button
           type="button"
@@ -93,22 +94,22 @@ export function Navbar() {
       >
         <div className="mx-auto flex max-w-7xl flex-col gap-1">
           {menuItems.map((item) => (
-            <a
+            <Link
               key={item.label}
               href={item.href}
               className="rounded-md px-3 py-3 text-base font-semibold text-white transition hover:bg-white/10 hover:text-[#f6c84c] focus:outline-none focus:ring-2 focus:ring-[#f6c84c]"
               onClick={() => setIsOpen(false)}
             >
               {item.label}
-            </a>
+            </Link>
           ))}
-          <a
-            href="#join"
+          <Link
+            href="/register"
             className="mt-3 rounded-md bg-[#f6c84c] px-4 py-3 text-center text-base font-bold text-[#4f0f1a] transition hover:bg-white hover:text-[#6f1725] focus:outline-none focus:ring-2 focus:ring-white"
             onClick={() => setIsOpen(false)}
           >
             Join the Movement
-          </a>
+          </Link>
         </div>
       </div>
     </header>

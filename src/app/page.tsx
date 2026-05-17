@@ -84,7 +84,7 @@ export default function Home() {
             </p>
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
               <a
-                href="#join"
+                href="/register"
                 className="inline-flex items-center justify-center rounded-md bg-[#f6c84c] px-7 py-4 text-base font-black text-[#4d0e19] shadow-xl shadow-black/25 transition hover:-translate-y-0.5 hover:bg-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#6f1725]"
               >
                 Join the Movement
@@ -149,7 +149,7 @@ export default function Home() {
               coordination, and accountable civic participation.
             </p>
             <a
-              href="#contact"
+              href="/register"
               className="mt-8 inline-flex rounded-md bg-[#f6c84c] px-6 py-4 text-sm font-black uppercase tracking-[0.08em] text-[#4d0e19] shadow-xl shadow-black/20 transition hover:-translate-y-0.5 hover:bg-white"
             >
               Start Registration
