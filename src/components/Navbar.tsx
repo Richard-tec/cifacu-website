@@ -8,7 +8,7 @@ const menuItems = [
   { label: "Home", href: "/" },
   { label: "About", href: "/#about" },
   { label: "Membership", href: "/#join" },
-  { label: "Activities", href: "/#activities" },
+  { label: "Activities", href: "/activities" },
   { label: "Leadership", href: "/#leadership" },
   { label: "Contact", href: "/#contact" },
 ];
