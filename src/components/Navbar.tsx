@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -32,8 +33,15 @@ export function Navbar() {
           className="flex items-center gap-3"
           aria-label="Citizens Forum Against Corruption home"
         >
-          <span className="flex size-12 shrink-0 items-center justify-center rounded-md border border-white/20 bg-white text-sm font-black tracking-tight text-[#6f1725] shadow-sm">
-            CF
+          <span className="flex size-12 shrink-0 items-center justify-center overflow-hidden rounded-md border border-white/20 bg-white shadow-sm">
+            <Image
+              alt="CIFACU official logo"
+              className="h-full w-full object-contain p-1"
+              height={400}
+              priority
+              src="/logo.png"
+              width={400}
+            />
           </span>
           <span className="flex flex-col leading-tight">
             <span className="text-sm font-bold uppercase tracking-[0.16em] text-[#f6c84c]">

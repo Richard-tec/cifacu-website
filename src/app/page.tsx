@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const activities = [
   {
     title: "Community Workshops",
@@ -71,6 +73,16 @@ export default function Home() {
 
         <div className="mx-auto flex min-h-[calc(100vh-5rem)] w-full max-w-7xl items-center px-4 py-20 sm:px-6 lg:px-8">
           <div className="max-w-4xl">
+            <div className="mb-8 flex size-24 items-center justify-center overflow-hidden rounded-xl border border-white/20 bg-white p-2 shadow-2xl shadow-black/25 sm:size-32">
+              <Image
+                alt="CIFACU official logo"
+                className="h-full w-full object-contain"
+                height={400}
+                priority
+                src="/logo.png"
+                width={400}
+              />
+            </div>
             <p className="mb-5 inline-flex rounded-full border border-[#f6c84c]/40 bg-white/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-[#f6c84c] shadow-2xl shadow-black/20 backdrop-blur">
               Citizens Forum Against Corruption in Uganda
             </p>
