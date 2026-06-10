@@ -60,23 +60,23 @@ const testimonials = [
 export default function Home() {
   return (
     <main className="flex flex-1 flex-col overflow-hidden bg-[#fffaf2] text-[#211718]">
-      <section className="relative isolate min-h-[calc(100vh-5rem)] overflow-hidden bg-[#3f0d17] text-white">
-        <div className="absolute inset-0 -z-30 bg-[radial-gradient(circle_at_18%_18%,rgba(246,200,76,0.20),transparent_30%),radial-gradient(circle_at_88%_12%,rgba(255,250,242,0.18),transparent_28%),linear-gradient(135deg,#fffaf2_0%,#efe4d1_28%,#6f1725_29%,#4d0e19_62%,#211718_100%)]" />
-        <div className="absolute inset-0 -z-20 opacity-[0.16] [background-image:linear-gradient(rgba(255,255,255,0.32)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.32)_1px,transparent_1px)] [background-size:72px_72px]" />
-        <div className="absolute -left-20 top-24 -z-10 h-64 w-64 rounded-full border border-[#f6c84c]/24 sm:h-96 sm:w-96" />
-        <div className="absolute bottom-16 right-[-5rem] -z-10 h-72 w-72 rounded-full border border-white/14 sm:h-[28rem] sm:w-[28rem]" />
-        <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(33,23,24,0.30)_0%,rgba(77,14,25,0.56)_48%,rgba(33,23,24,0.82)_100%)]" />
+      <section className="relative isolate min-h-[calc(100vh-5rem)] overflow-hidden bg-[#fffdf8] text-[#211718]">
+        <div className="absolute inset-0 -z-30 bg-[radial-gradient(circle_at_17%_20%,rgba(246,200,76,0.18),transparent_32%),radial-gradient(circle_at_88%_15%,rgba(111,23,37,0.10),transparent_30%),linear-gradient(135deg,#ffffff_0%,#fffaf2_38%,#f3f5f4_72%,#ebe5dc_100%)]" />
+        <div className="absolute inset-0 -z-20 opacity-[0.42] [background-image:linear-gradient(rgba(111,23,37,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(111,23,37,0.08)_1px,transparent_1px)] [background-size:72px_72px]" />
+        <div className="absolute -left-20 top-24 -z-10 h-64 w-64 rounded-full border border-[#6f1725]/12 sm:h-96 sm:w-96" />
+        <div className="absolute bottom-16 right-[-5rem] -z-10 h-72 w-72 rounded-full border border-[#f6c84c]/28 sm:h-[28rem] sm:w-[28rem]" />
+        <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(255,255,255,0.84)_0%,rgba(255,250,242,0.72)_46%,rgba(111,23,37,0.08)_100%)]" />
         <div className="absolute left-0 right-0 top-0 h-2 bg-[linear-gradient(90deg,#1d1d1d_0_33%,#f6c84c_33%_66%,#9b1b30_66%_100%)]" />
 
         <div className="mx-auto grid min-h-[calc(100vh-5rem)] w-full max-w-7xl items-center gap-12 px-4 py-16 sm:px-6 sm:py-20 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
           <div className="order-2 max-w-3xl lg:order-1">
-            <p className="mb-5 inline-flex rounded-full border border-[#f6c84c]/40 bg-white/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-[#f6c84c] shadow-2xl shadow-black/20 backdrop-blur">
+            <p className="mb-5 inline-flex rounded-full border border-[#6f1725]/12 bg-white/82 px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-[#8a1d2d] shadow-lg shadow-[#4d0e19]/8 backdrop-blur">
               Citizens Forum Against Corruption in Uganda
             </p>
-            <h1 className="max-w-4xl text-5xl font-black leading-[0.95] tracking-tight sm:text-7xl lg:text-8xl">
+            <h1 className="max-w-4xl text-5xl font-black leading-[0.95] tracking-tight text-[#4d0e19] sm:text-7xl lg:text-8xl">
               Me &amp; You Against Corruption
             </h1>
-            <p className="mt-7 max-w-2xl text-lg leading-8 text-white/86 sm:text-xl">
+            <p className="mt-7 max-w-2xl text-lg leading-8 text-[#514648] sm:text-xl">
               A citizen-led movement advancing accountability, protecting public
               property, and turning Uganda&apos;s constitutional duty into
               organized civic action.
@@ -84,13 +84,13 @@ export default function Home() {
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
               <a
                 href="/register"
-                className="inline-flex items-center justify-center rounded-md bg-[#f6c84c] px-7 py-4 text-base font-black text-[#4d0e19] shadow-xl shadow-black/25 transition hover:-translate-y-0.5 hover:bg-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#6f1725]"
+                className="inline-flex items-center justify-center rounded-md bg-[#6f1725] px-7 py-4 text-base font-black text-white shadow-xl shadow-[#4d0e19]/18 transition hover:-translate-y-0.5 hover:bg-[#4d0e19] focus:outline-none focus:ring-2 focus:ring-[#f6c84c] focus:ring-offset-2 focus:ring-offset-[#fffaf2]"
               >
                 Join the Movement
               </a>
               <a
                 href="#about"
-                className="inline-flex items-center justify-center rounded-md border border-white/30 bg-white/10 px-7 py-4 text-base font-bold text-white backdrop-blur transition hover:-translate-y-0.5 hover:border-[#f6c84c] hover:text-[#f6c84c] focus:outline-none focus:ring-2 focus:ring-[#f6c84c] focus:ring-offset-2 focus:ring-offset-[#6f1725]"
+                className="inline-flex items-center justify-center rounded-md border border-[#6f1725]/18 bg-white/80 px-7 py-4 text-base font-bold text-[#6f1725] shadow-lg shadow-[#4d0e19]/8 backdrop-blur transition hover:-translate-y-0.5 hover:border-[#6f1725] hover:bg-white focus:outline-none focus:ring-2 focus:ring-[#6f1725] focus:ring-offset-2 focus:ring-offset-[#fffaf2]"
               >
                 Learn More
               </a>
@@ -99,10 +99,10 @@ export default function Home() {
 
           <div className="order-1 flex justify-center lg:order-2 lg:justify-end">
             <div className="relative flex aspect-square w-full max-w-[19rem] items-center justify-center sm:max-w-[25rem] lg:max-w-[34rem]">
-              <div className="absolute inset-0 rounded-full bg-[#f6c84c]/18 blur-3xl" />
-              <div className="absolute inset-[7%] rounded-full border border-white/18 bg-white/8 shadow-2xl shadow-black/20 backdrop-blur-md" />
-              <div className="absolute inset-[17%] rounded-full border border-[#f6c84c]/26" />
-              <div className="relative flex size-[78%] items-center justify-center overflow-hidden rounded-2xl border border-white/24 bg-white p-5 shadow-2xl shadow-black/35 sm:p-7 lg:p-9">
+              <div className="absolute inset-0 rounded-full bg-[#f6c84c]/22 blur-3xl" />
+              <div className="absolute inset-[7%] rounded-full border border-[#6f1725]/10 bg-white/72 shadow-2xl shadow-[#4d0e19]/12 backdrop-blur-md" />
+              <div className="absolute inset-[17%] rounded-full border border-[#f6c84c]/36" />
+              <div className="relative flex size-[78%] items-center justify-center overflow-hidden rounded-2xl border border-[#6f1725]/12 bg-white p-5 shadow-2xl shadow-[#4d0e19]/20 sm:p-7 lg:p-9">
                 <Image
                   alt="CIFACU official logo"
                   className="h-full w-full object-contain"
@@ -151,23 +151,23 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="join" className="bg-[#6f1725] py-20 text-white sm:py-28">
+      <section id="join" className="bg-[#f7f8f7] py-20 text-[#211718] sm:py-28">
         <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
           <div>
-            <p className="text-sm font-black uppercase tracking-[0.2em] text-[#f6c84c]">
+            <p className="text-sm font-black uppercase tracking-[0.2em] text-[#8a1d2d]">
               Membership
             </p>
-            <h2 className="mt-4 text-3xl font-black tracking-tight sm:text-5xl">
+            <h2 className="mt-4 text-3xl font-black tracking-tight text-[#4d0e19] sm:text-5xl">
               Register, verify, and stand with your community.
             </h2>
-            <p className="mt-6 text-lg leading-8 text-white/80">
+            <p className="mt-6 text-lg leading-8 text-[#5b5051]">
               Citizens can register as members using their National ID number,
               helping the forum build a trusted network for training,
               coordination, and accountable civic participation.
             </p>
             <a
               href="/register"
-              className="mt-8 inline-flex rounded-md bg-[#f6c84c] px-6 py-4 text-sm font-black uppercase tracking-[0.08em] text-[#4d0e19] shadow-xl shadow-black/20 transition hover:-translate-y-0.5 hover:bg-white"
+              className="mt-8 inline-flex rounded-md bg-[#6f1725] px-6 py-4 text-sm font-black uppercase tracking-[0.08em] text-white shadow-xl shadow-[#4d0e19]/14 transition hover:-translate-y-0.5 hover:bg-[#4d0e19]"
             >
               Start Registration
             </a>
@@ -176,12 +176,12 @@ export default function Home() {
             {benefits.map((benefit, index) => (
               <div
                 key={benefit}
-                className="group flex gap-4 rounded-lg border border-white/10 bg-white/8 p-5 shadow-xl shadow-black/10 backdrop-blur transition hover:-translate-y-1 hover:bg-white/12"
+                className="group flex gap-4 rounded-lg border border-[#6f1725]/10 bg-white p-5 shadow-xl shadow-[#4d0e19]/8 transition hover:-translate-y-1 hover:border-[#6f1725]/18 hover:shadow-[#4d0e19]/12"
               >
                 <span className="flex size-10 shrink-0 items-center justify-center rounded-md bg-[#f6c84c] text-sm font-black text-[#4d0e19]">
                   {String(index + 1).padStart(2, "0")}
                 </span>
-                <p className="self-center text-base font-semibold text-white">
+                <p className="self-center text-base font-semibold text-[#3f3436]">
                   {benefit}
                 </p>
               </div>
