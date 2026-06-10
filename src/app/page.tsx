@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { HeroImageCarousel } from "@/components/HeroImageCarousel";
 
 const activities = [
   {
@@ -68,20 +68,20 @@ export default function Home() {
         <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(255,255,255,0.84)_0%,rgba(255,250,242,0.72)_46%,rgba(111,23,37,0.08)_100%)]" />
         <div className="absolute left-0 right-0 top-0 h-2 bg-[linear-gradient(90deg,#1d1d1d_0_33%,#f6c84c_33%_66%,#9b1b30_66%_100%)]" />
 
-        <div className="mx-auto grid min-h-[calc(100vh-5rem)] w-full max-w-7xl items-center gap-12 px-4 py-16 sm:px-6 sm:py-20 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
+        <div className="mx-auto grid min-h-[calc(100vh-5rem)] w-full max-w-[92rem] items-center gap-8 px-4 py-8 sm:px-6 sm:py-10 lg:grid-cols-[0.68fr_1.32fr] lg:gap-10 lg:px-8 lg:py-12">
           <div className="order-2 max-w-3xl lg:order-1">
             <p className="mb-5 inline-flex rounded-full border border-[#6f1725]/12 bg-white/82 px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-[#8a1d2d] shadow-lg shadow-[#4d0e19]/8 backdrop-blur">
-              Citizens Forum Against Corruption in Uganda
+              Civic accountability and public integrity
             </p>
-            <h1 className="max-w-4xl text-5xl font-black leading-[0.95] tracking-tight text-[#4d0e19] sm:text-7xl lg:text-8xl">
-              Me &amp; You Against Corruption
+            <h1 className="max-w-4xl text-4xl font-black leading-[0.98] tracking-tight text-[#4d0e19] sm:text-6xl lg:text-7xl">
+              Citizens&apos; Forum Against Corruption Uganda
             </h1>
-            <p className="mt-7 max-w-2xl text-lg leading-8 text-[#514648] sm:text-xl">
+            <p className="mt-6 max-w-2xl text-lg leading-8 text-[#514648] sm:text-xl">
               A citizen-led movement advancing accountability, protecting public
               property, and turning Uganda&apos;s constitutional duty into
               organized civic action.
             </p>
-            <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+            <div className="mt-8 flex flex-col gap-4 sm:flex-row">
               <a
                 href="/register"
                 className="inline-flex items-center justify-center rounded-md bg-[#6f1725] px-7 py-4 text-base font-black text-white shadow-xl shadow-[#4d0e19]/18 transition hover:-translate-y-0.5 hover:bg-[#4d0e19] focus:outline-none focus:ring-2 focus:ring-[#f6c84c] focus:ring-offset-2 focus:ring-offset-[#fffaf2]"
@@ -97,21 +97,10 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="order-1 flex justify-center lg:order-2 lg:justify-end">
-            <div className="relative flex aspect-square w-full max-w-[19rem] items-center justify-center sm:max-w-[25rem] lg:max-w-[34rem]">
-              <div className="absolute inset-0 rounded-full bg-[#f6c84c]/22 blur-3xl" />
-              <div className="absolute inset-[7%] rounded-full border border-[#6f1725]/10 bg-white/72 shadow-2xl shadow-[#4d0e19]/12 backdrop-blur-md" />
-              <div className="absolute inset-[17%] rounded-full border border-[#f6c84c]/36" />
-              <div className="relative flex size-[78%] items-center justify-center overflow-hidden rounded-2xl border border-[#6f1725]/12 bg-white p-5 shadow-2xl shadow-[#4d0e19]/20 sm:p-7 lg:p-9">
-                <Image
-                  alt="CIFACU official logo"
-                  className="h-full w-full object-contain"
-                  height={400}
-                  priority
-                  src="/logo.png"
-                  width={400}
-                />
-              </div>
+          <div className="order-1 flex w-full justify-center lg:order-2">
+            <div className="relative flex w-full items-center justify-center">
+              <div className="absolute inset-0 rounded-full bg-[#f6c84c]/18 blur-3xl" />
+              <HeroImageCarousel />
             </div>
           </div>
         </div>
@@ -129,7 +118,7 @@ export default function Home() {
           </div>
           <div className="rounded-lg border border-[#8a1d2d]/10 bg-[#fffaf2] p-8 shadow-2xl shadow-[#4d0e19]/8">
             <p className="text-lg leading-8 text-[#4d4243]">
-              Citizens Forum Against Corruption in Uganda exists to mobilize
+              Citizens&apos; Forum Against Corruption Uganda exists to mobilize
               citizens against corruption, misuse of public property, bribery,
               and abuse of entrusted power. The forum is inspired by Article
               17(1)(i) of Uganda&apos;s Constitution, which places a duty on

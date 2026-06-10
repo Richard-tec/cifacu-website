@@ -11,9 +11,9 @@ const commitments = [
 ];
 
 export const metadata: Metadata = {
-  title: "Anti-Corruption Pledge | Citizens Forum Against Corruption",
+  title: "Anti-Corruption Pledge | Citizens' Forum Against Corruption Uganda",
   description:
-    "Digitally sign the Citizens Forum Against Corruption patriotic citizen pledge.",
+    "Digitally sign the Citizens' Forum Against Corruption Uganda patriotic citizen pledge.",
 };
 
 export default function PledgePage() {
@@ -46,7 +46,7 @@ export default function PledgePage() {
               <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
                 <div>
                   <p className="text-xs font-black uppercase tracking-[0.18em] text-[#8a1d2d]">
-                    Citizens Forum Against Corruption
+                    Citizens&apos; Forum Against Corruption Uganda
                   </p>
                   <h2 className="mt-2 text-3xl font-black text-[#211718]">
                     Anti-Corruption Pledge
@@ -109,7 +109,7 @@ export default function PledgePage() {
 
               <div className="mt-6 border-t border-[#6f1725]/18 pt-6 text-center">
                 <p className="text-sm font-black uppercase tracking-[0.16em] text-[#8a1d2d]">
-                  Me &amp; You Against Corruption
+                  Integrity, accountability, and citizen action.
                 </p>
               </div>
             </div>

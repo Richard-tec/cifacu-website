@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { MembershipRegistrationForm } from "@/components/MembershipRegistrationForm";
 
 export const metadata: Metadata = {
-  title: "Membership Registration | Citizens Forum Against Corruption",
+  title: "Membership Registration | Citizens' Forum Against Corruption Uganda",
   description:
-    "Register as a member of the Citizens Forum Against Corruption in Uganda.",
+    "Register as a member of Citizens' Forum Against Corruption Uganda.",
 };
 
 export default function RegisterPage() {

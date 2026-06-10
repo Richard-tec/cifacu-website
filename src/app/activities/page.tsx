@@ -34,7 +34,7 @@ const activities = [
   },
   {
     category: "Awareness Campaign",
-    title: "Me & You Against Corruption Road Campaign",
+    title: "Citizen Integrity Road Campaign",
     date: "12 June 2026",
     location: "Jinja Main Street",
     description:
@@ -45,9 +45,9 @@ const activities = [
 ];
 
 export const metadata: Metadata = {
-  title: "Activities & Events | Citizens Forum Against Corruption",
+  title: "Activities & Events | Citizens' Forum Against Corruption Uganda",
   description:
-    "Workshops, meetings, youth training, and awareness campaigns by the Citizens Forum Against Corruption.",
+    "Workshops, meetings, youth training, and awareness campaigns by Citizens' Forum Against Corruption Uganda.",
 };
 
 export default function ActivitiesPage() {

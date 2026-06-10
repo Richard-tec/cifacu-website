@@ -39,7 +39,7 @@ export function Footer() {
                 CIFACU
               </p>
               <h2 className="text-lg font-black">
-                Citizens Forum Against Corruption
+                Citizens&apos; Forum Against Corruption Uganda
               </h2>
             </div>
           </div>
@@ -49,7 +49,7 @@ export function Footer() {
             duty.
           </p>
           <p className="mt-5 text-lg font-black text-[#f6c84c]">
-            Me &amp; You Against Corruption
+            Integrity, accountability, and citizen action.
           </p>
         </section>
 
@@ -102,7 +102,7 @@ export function Footer() {
       </div>
 
       <div className="border-t border-white/10 px-4 py-5 text-center text-sm font-semibold text-white/58">
-        &copy; 2026 Citizens Forum Against Corruption in Uganda. All rights
+        &copy; 2026 Citizens&apos; Forum Against Corruption Uganda. All rights
         reserved.
       </div>
     </footer>
