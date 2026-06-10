@@ -1,3 +1,4 @@
+import { ContactEnquiryForm } from "@/components/ContactEnquiryForm";
 import { HeroImageCarousel } from "@/components/HeroImageCarousel";
 
 const activities = [
@@ -54,6 +55,23 @@ const testimonials = [
       "The movement gives young people a disciplined way to reject bribery and demand honest service delivery.",
     author: "Sarah K.",
     location: "Mbarara",
+  },
+];
+
+const contactChannels = [
+  {
+    label: "Office",
+    value: "Kampala, Uganda",
+  },
+  {
+    href: "tel:+256700000000",
+    label: "Phone",
+    value: "+256 700 000 000",
+  },
+  {
+    href: "mailto:info@cifacu.org",
+    label: "Email",
+    value: "info@cifacu.org",
   },
 ];
 
@@ -277,6 +295,52 @@ export default function Home() {
               </figure>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section id="contact" className="bg-[#fffaf2] py-20 sm:py-28">
+        <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[0.86fr_1.14fr] lg:px-8">
+          <div>
+            <p className="text-sm font-black uppercase tracking-[0.2em] text-[#8a1d2d]">
+              Contact Us
+            </p>
+            <h2 className="mt-4 text-3xl font-black tracking-tight text-[#4d0e19] sm:text-5xl">
+              Enquiries, partnerships, and citizen coordination.
+            </h2>
+            <p className="mt-6 text-lg leading-8 text-[#5b5051]">
+              Reach the CIFACU team for membership support, district
+              coordination, program partnerships, media enquiries, or civic
+              accountability concerns.
+            </p>
+
+            <div className="mt-8 grid gap-4">
+              {contactChannels.map((channel) => (
+                <div
+                  className="rounded-lg border border-[#6f1725]/10 bg-white p-5 shadow-lg shadow-[#4d0e19]/8"
+                  key={channel.label}
+                >
+                  <p className="text-xs font-black uppercase tracking-[0.18em] text-[#8a1d2d]">
+                    {channel.label}
+                  </p>
+                  {channel.href ? (
+                    <a
+                      className="mt-2 block text-lg font-black text-[#211718] transition hover:text-[#8a1d2d]"
+                      href={channel.href}
+                    >
+                      {channel.value}
+                    </a>
+                  ) : (
+                    <p className="mt-2 text-lg font-black text-[#211718]">
+                      {channel.value}
+                    </p>
+                  )}
+                </div>
+              ))}
+            </div>
+
+          </div>
+
+          <ContactEnquiryForm />
         </div>
       </section>
 

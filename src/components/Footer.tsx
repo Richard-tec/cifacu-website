@@ -26,7 +26,7 @@ export function Footer() {
   }
 
   return (
-    <footer id="contact" className="bg-[#4d0e19] text-white">
+    <footer className="bg-[#4d0e19] text-white">
       <div className="h-2 bg-[linear-gradient(90deg,#1d1d1d_0_33%,#f6c84c_33%_66%,#9b1b30_66%_100%)]" />
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-2 lg:grid-cols-[1.25fr_0.8fr_0.85fr_0.7fr] lg:px-8">
         <section>
