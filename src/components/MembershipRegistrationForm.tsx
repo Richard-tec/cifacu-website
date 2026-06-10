@@ -194,9 +194,8 @@ export function MembershipRegistrationForm() {
             <option disabled value="">
               Select gender
             </option>
-            <option>Female</option>
             <option>Male</option>
-            <option>Prefer not to say</option>
+            <option>Female</option>
           </select>
         </label>
 
