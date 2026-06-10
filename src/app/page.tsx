@@ -60,29 +60,16 @@ const testimonials = [
 export default function Home() {
   return (
     <main className="flex flex-1 flex-col overflow-hidden bg-[#fffaf2] text-[#211718]">
-      <section className="relative isolate min-h-[calc(100vh-5rem)] overflow-hidden bg-[#4d0e19] text-white">
-        <div
-          className="absolute inset-0 -z-20 bg-cover bg-center opacity-45"
-          style={{
-            backgroundImage:
-              "url('https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?auto=format&fit=crop&w=1800&q=80')",
-          }}
-        />
-        <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(54,8,17,0.96)_0%,rgba(77,14,25,0.88)_43%,rgba(0,0,0,0.48)_100%)]" />
+      <section className="relative isolate min-h-[calc(100vh-5rem)] overflow-hidden bg-[#3f0d17] text-white">
+        <div className="absolute inset-0 -z-30 bg-[radial-gradient(circle_at_18%_18%,rgba(246,200,76,0.20),transparent_30%),radial-gradient(circle_at_88%_12%,rgba(255,250,242,0.18),transparent_28%),linear-gradient(135deg,#fffaf2_0%,#efe4d1_28%,#6f1725_29%,#4d0e19_62%,#211718_100%)]" />
+        <div className="absolute inset-0 -z-20 opacity-[0.16] [background-image:linear-gradient(rgba(255,255,255,0.32)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.32)_1px,transparent_1px)] [background-size:72px_72px]" />
+        <div className="absolute -left-20 top-24 -z-10 h-64 w-64 rounded-full border border-[#f6c84c]/24 sm:h-96 sm:w-96" />
+        <div className="absolute bottom-16 right-[-5rem] -z-10 h-72 w-72 rounded-full border border-white/14 sm:h-[28rem] sm:w-[28rem]" />
+        <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(33,23,24,0.30)_0%,rgba(77,14,25,0.56)_48%,rgba(33,23,24,0.82)_100%)]" />
         <div className="absolute left-0 right-0 top-0 h-2 bg-[linear-gradient(90deg,#1d1d1d_0_33%,#f6c84c_33%_66%,#9b1b30_66%_100%)]" />
 
-        <div className="mx-auto flex min-h-[calc(100vh-5rem)] w-full max-w-7xl items-center px-4 py-20 sm:px-6 lg:px-8">
-          <div className="max-w-4xl">
-            <div className="mb-8 flex size-24 items-center justify-center overflow-hidden rounded-xl border border-white/20 bg-white p-2 shadow-2xl shadow-black/25 sm:size-32">
-              <Image
-                alt="CIFACU official logo"
-                className="h-full w-full object-contain"
-                height={400}
-                priority
-                src="/logo.png"
-                width={400}
-              />
-            </div>
+        <div className="mx-auto grid min-h-[calc(100vh-5rem)] w-full max-w-7xl items-center gap-12 px-4 py-16 sm:px-6 sm:py-20 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
+          <div className="order-2 max-w-3xl lg:order-1">
             <p className="mb-5 inline-flex rounded-full border border-[#f6c84c]/40 bg-white/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-[#f6c84c] shadow-2xl shadow-black/20 backdrop-blur">
               Citizens Forum Against Corruption in Uganda
             </p>
@@ -107,6 +94,24 @@ export default function Home() {
               >
                 Learn More
               </a>
+            </div>
+          </div>
+
+          <div className="order-1 flex justify-center lg:order-2 lg:justify-end">
+            <div className="relative flex aspect-square w-full max-w-[19rem] items-center justify-center sm:max-w-[25rem] lg:max-w-[34rem]">
+              <div className="absolute inset-0 rounded-full bg-[#f6c84c]/18 blur-3xl" />
+              <div className="absolute inset-[7%] rounded-full border border-white/18 bg-white/8 shadow-2xl shadow-black/20 backdrop-blur-md" />
+              <div className="absolute inset-[17%] rounded-full border border-[#f6c84c]/26" />
+              <div className="relative flex size-[78%] items-center justify-center overflow-hidden rounded-2xl border border-white/24 bg-white p-5 shadow-2xl shadow-black/35 sm:p-7 lg:p-9">
+                <Image
+                  alt="CIFACU official logo"
+                  className="h-full w-full object-contain"
+                  height={400}
+                  priority
+                  src="/logo.png"
+                  width={400}
+                />
+              </div>
             </div>
           </div>
         </div>
