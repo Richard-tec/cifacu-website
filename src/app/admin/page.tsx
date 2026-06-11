@@ -3,7 +3,7 @@ import Link from "next/link";
 import { AdminLoginForm } from "@/components/AdminLoginForm";
 
 export const metadata: Metadata = {
-  title: "Admin Login | CITIZENS' FORUM AGAINST CORRUPTION UGANDA(CIFACU)",
+  title: "Admin Login | CITIZENS' FORUM AGAINST CORRUPTION UGANDA (CIFACU)",
   description: "Administrator login for the CIFACU website.",
 };
 
@@ -23,7 +23,7 @@ export default function AdminLoginPage() {
             CIFACU Admin
           </Link>
           <p className="text-sm font-black uppercase tracking-[0.2em] text-[#f6c84c]">
-            CITIZENS&apos; FORUM AGAINST CORRUPTION UGANDA(CIFACU)
+            CITIZENS&apos; FORUM AGAINST CORRUPTION UGANDA (CIFACU)
           </p>
           <h2 className="mt-5 max-w-2xl text-4xl font-black tracking-tight sm:text-6xl">
             Manage the movement with clarity and accountability.

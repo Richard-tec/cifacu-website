@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { MembershipRegistrationForm } from "@/components/MembershipRegistrationForm";
 
 export const metadata: Metadata = {
-  title: "Membership Registration | CITIZENS' FORUM AGAINST CORRUPTION UGANDA(CIFACU)",
+  title: "Membership Registration | CITIZENS' FORUM AGAINST CORRUPTION UGANDA (CIFACU)",
   description:
-    "Register as a member of CITIZENS' FORUM AGAINST CORRUPTION UGANDA(CIFACU).",
+    "Register as a member of CITIZENS' FORUM AGAINST CORRUPTION UGANDA (CIFACU).",
 };
 
 export default function RegisterPage() {

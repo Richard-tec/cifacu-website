@@ -39,7 +39,7 @@ export function Footer() {
                 CIFACU
               </p>
               <h2 className="text-lg font-black">
-                CITIZENS&apos; FORUM AGAINST CORRUPTION UGANDA(CIFACU)
+                CITIZENS&apos; FORUM AGAINST CORRUPTION UGANDA (CIFACU)
               </h2>
             </div>
           </div>
@@ -102,7 +102,7 @@ export function Footer() {
       </div>
 
       <div className="border-t border-white/10 px-4 py-5 text-center text-sm font-semibold text-white/58">
-        &copy; 2026 CITIZENS&apos; FORUM AGAINST CORRUPTION UGANDA(CIFACU). All rights
+        &copy; 2026 CITIZENS&apos; FORUM AGAINST CORRUPTION UGANDA (CIFACU). All rights
         reserved.
       </div>
     </footer>

@@ -4,7 +4,7 @@ import { Navbar } from "@/components/Navbar";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "CITIZENS' FORUM AGAINST CORRUPTION UGANDA(CIFACU)",
+  title: "CITIZENS' FORUM AGAINST CORRUPTION UGANDA (CIFACU)",
   description: "A civic movement promoting accountability and public integrity.",
 };
 

@@ -92,7 +92,7 @@ export default function Home() {
               Civic accountability and public integrity
             </p>
             <h1 className="max-w-4xl text-4xl font-black leading-[0.98] tracking-tight text-[#4d0e19] sm:text-6xl lg:text-7xl">
-              CITIZENS&apos; FORUM AGAINST CORRUPTION UGANDA(CIFACU)
+              CITIZENS&apos; FORUM AGAINST CORRUPTION UGANDA (CIFACU)
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-[#514648] sm:text-xl">
               A citizen-led movement advancing accountability, protecting public
@@ -136,7 +136,7 @@ export default function Home() {
           </div>
           <div className="rounded-lg border border-[#8a1d2d]/10 bg-[#fffaf2] p-8 shadow-2xl shadow-[#4d0e19]/8">
             <p className="text-lg leading-8 text-[#4d4243]">
-              CITIZENS&apos; FORUM AGAINST CORRUPTION UGANDA(CIFACU) exists to mobilize
+              CITIZENS&apos; FORUM AGAINST CORRUPTION UGANDA (CIFACU) exists to mobilize
               citizens against corruption, misuse of public property, bribery,
               and abuse of entrusted power. The forum is inspired by Article
               17(1)(i) of Uganda&apos;s Constitution, which places a duty on
