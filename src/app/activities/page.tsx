@@ -45,9 +45,9 @@ const activities = [
 ];
 
 export const metadata: Metadata = {
-  title: "Activities & Events | Citizens' Forum Against Corruption Uganda",
+  title: "Activities & Events | CITIZENS' FORUM AGAINST CORRUPTION UGANDA(CIFACU)",
   description:
-    "Workshops, meetings, youth training, and awareness campaigns by Citizens' Forum Against Corruption Uganda.",
+    "Workshops, meetings, youth training, and awareness campaigns by CITIZENS' FORUM AGAINST CORRUPTION UGANDA(CIFACU).",
 };
 
 export default function ActivitiesPage() {

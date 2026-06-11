@@ -51,7 +51,7 @@ const navItems = [
 ];
 
 export const metadata: Metadata = {
-  title: "Admin Dashboard | Citizens' Forum Against Corruption Uganda",
+  title: "Admin Dashboard | CITIZENS' FORUM AGAINST CORRUPTION UGANDA(CIFACU)",
   description: "CIFACU administration dashboard.",
 };
 

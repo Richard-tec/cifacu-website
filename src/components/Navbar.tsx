@@ -31,7 +31,7 @@ export function Navbar() {
         <Link
           href="/"
           className="flex items-center gap-3"
-          aria-label="Citizens' Forum Against Corruption Uganda home"
+          aria-label="CITIZENS' FORUM AGAINST CORRUPTION UGANDA(CIFACU) home"
         >
           <span className="flex size-12 shrink-0 items-center justify-center overflow-hidden rounded-md border border-white/20 bg-white shadow-sm">
             <Image
@@ -48,7 +48,7 @@ export function Navbar() {
               CIFACU
             </span>
             <span className="max-w-44 text-sm font-semibold text-white sm:max-w-none">
-              Citizens&apos; Forum Against Corruption Uganda
+              CITIZENS&apos; FORUM AGAINST CORRUPTION UGANDA(CIFACU)
             </span>
           </span>
         </Link>

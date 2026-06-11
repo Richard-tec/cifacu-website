@@ -229,7 +229,7 @@ export function MembershipRegistrationForm() {
           />
           <span className="text-sm font-bold leading-6 text-[#3a2628]">
             I agree to combat corruption and misuse of public property as part
-            of Citizens&apos; Forum Against Corruption Uganda.
+            of CITIZENS&apos; FORUM AGAINST CORRUPTION UGANDA(CIFACU).
           </span>
         </label>
 
