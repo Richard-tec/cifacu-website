@@ -8,9 +8,9 @@ import { useState } from "react";
 const menuItems = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
-  { label: "Join Movement", href: "/register" },
   { label: "Activities", href: "/activities" },
   { label: "Youth Programs", href: "/activities" },
+  { label: "Pledge", href: "/pledge" },
   { label: "Contact", href: "/#contact" },
 ];
 
@@ -66,7 +66,7 @@ export function Navbar() {
           href="/register"
           className="hidden rounded-md bg-[#f6c84c] px-5 py-3 text-sm font-bold text-[#4f0f1a] shadow-sm transition hover:bg-white hover:text-[#6f1725] focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#6f1725] lg:inline-flex"
         >
-          Join the Movement
+          Join the Platform
         </Link>
 
         <button
@@ -119,7 +119,7 @@ export function Navbar() {
             className="mt-3 rounded-md bg-[#f6c84c] px-4 py-3 text-center text-base font-bold text-[#4f0f1a] transition hover:bg-white hover:text-[#6f1725] focus:outline-none focus:ring-2 focus:ring-white"
             onClick={() => setIsOpen(false)}
           >
-            Join the Movement
+            Join the Platform
           </Link>
         </div>
       </div>

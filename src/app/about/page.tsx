@@ -84,7 +84,7 @@ export default function AboutPage() {
                 href="/register"
                 className="inline-flex items-center justify-center rounded-md bg-[#6f1725] px-6 py-4 text-sm font-black uppercase tracking-[0.08em] text-white shadow-xl shadow-[#4d0e19]/14 transition hover:-translate-y-0.5 hover:bg-[#4d0e19] focus:outline-none focus:ring-2 focus:ring-[#f6c84c] focus:ring-offset-2 focus:ring-offset-[#fffaf2]"
               >
-                Join the Movement
+                Join the Platform
               </Link>
               <Link
                 href="/pledge"

@@ -104,7 +104,7 @@ export default function Home() {
                 href="/register"
                 className="inline-flex items-center justify-center rounded-md bg-[#6f1725] px-7 py-4 text-base font-black text-white shadow-xl shadow-[#4d0e19]/18 transition hover:-translate-y-0.5 hover:bg-[#4d0e19] focus:outline-none focus:ring-2 focus:ring-[#f6c84c] focus:ring-offset-2 focus:ring-offset-[#fffaf2]"
               >
-                Join the Movement
+                Join the Platform
               </a>
               <a
                 href="/about"

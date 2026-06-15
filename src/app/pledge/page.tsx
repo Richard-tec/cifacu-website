@@ -28,7 +28,7 @@ export default function PledgePage() {
               Citizen Anti-Corruption Commitment
             </p>
             <h1 className="mt-5 text-4xl font-black tracking-tight sm:text-6xl">
-              Patriotic pledge for public integrity.
+              Anti Corruption Pledge
             </h1>
             <p className="mt-6 max-w-3xl text-lg leading-8 text-white/80">
               A modern digital pledge for citizens who choose to stand against
@@ -134,7 +134,7 @@ export default function PledgePage() {
                 className="mt-6 inline-flex w-full items-center justify-center rounded-md bg-[#f6c84c] px-6 py-4 text-sm font-black uppercase tracking-[0.08em] text-[#4d0e19] shadow-lg shadow-[#4d0e19]/12 transition hover:-translate-y-0.5 hover:bg-[#ffe28a] sm:w-auto"
                 href="/register"
               >
-                Join the Movement
+                Join the Platform
               </Link>
             </section>
           </aside>
