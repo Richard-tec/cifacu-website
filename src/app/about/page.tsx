@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -45,22 +44,37 @@ const cifacuValues = [
 
 const cifacuModel = ["Reject", "Resist", "Report"];
 
+const aboutHighlights = [
+  {
+    label: "Constitutional basis",
+    value: "Article 17(1)(i)",
+  },
+  {
+    label: "Engagement model",
+    value: "Peaceful dialogue and civic action",
+  },
+  {
+    label: "Citizen posture",
+    value: "Reject, resist, and report corruption",
+  },
+];
+
 export default function AboutPage() {
   return (
     <main className="flex flex-1 flex-col bg-[#fffaf2] text-[#211718]">
-      <section className="bg-[#fffdf8] py-16 sm:py-20 lg:py-24">
-        <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[0.92fr_1.08fr] lg:items-center lg:px-8">
+      <section className="bg-[#fffdf8] py-12 sm:py-16 lg:py-20">
+        <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:px-8">
           <div>
             <p className="text-sm font-black uppercase tracking-[0.2em] text-[#8a1d2d]">
               About CIFACU
             </p>
-            <h1 className="mt-4 max-w-3xl text-3xl font-black leading-tight tracking-tight text-[#4d0e19] sm:text-5xl lg:text-6xl">
+            <h1 className="mt-4 max-w-4xl text-3xl font-black leading-tight tracking-tight text-[#4d0e19] sm:text-5xl lg:text-6xl">
               <span className="block">CITIZENS&apos; FORUM</span>
               <span className="block">AGAINST</span>
               <span className="block">CORRUPTION</span>
               <span className="block">UGANDA</span>
             </h1>
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-[#514648]">
+            <p className="mt-6 max-w-3xl text-lg leading-8 text-[#514648]">
               Citizens&apos; Forum Against Corruption Uganda (CIFACU) is a
               non-discriminatory, non-sectarian, and intergenerational platform
               for anti-corruption warriors.
@@ -81,29 +95,49 @@ export default function AboutPage() {
             </div>
           </div>
 
-          <div className="relative min-h-[22rem] overflow-hidden rounded-lg border border-[#6f1725]/10 bg-white shadow-2xl shadow-[#4d0e19]/12 sm:min-h-[30rem]">
-            <Image
-              alt="CIFACU community participation and public integrity gathering"
-              className="object-cover"
-              fill
-              priority
-              sizes="(min-width: 1024px) 50vw, 100vw"
-              src="/images/photo2.jpg"
-            />
-            <div className="absolute inset-x-0 bottom-0 bg-[#211718]/78 p-5 text-white backdrop-blur">
-              <p className="text-xs font-black uppercase tracking-[0.18em] text-[#f6c84c]">
-                Citizen action
+          <aside className="rounded-lg border border-[#6f1725]/10 bg-white p-6 shadow-2xl shadow-[#4d0e19]/10 lg:p-8">
+            <p className="text-sm font-black uppercase tracking-[0.18em] text-[#8a1d2d]">
+              At a glance
+            </p>
+            <h2 className="mt-4 text-2xl font-black leading-tight text-[#211718]">
+              Organized citizen participation against corruption.
+            </h2>
+            <dl className="mt-6 divide-y divide-[#6f1725]/10">
+              {aboutHighlights.map((item) => (
+                <div
+                  key={item.label}
+                  className="grid gap-2 py-4 sm:grid-cols-[0.42fr_0.58fr]"
+                >
+                  <dt className="text-xs font-black uppercase tracking-[0.14em] text-[#8a1d2d]">
+                    {item.label}
+                  </dt>
+                  <dd className="text-sm font-bold leading-6 text-[#3f3436]">
+                    {item.value}
+                  </dd>
+                </div>
+              ))}
+            </dl>
+            <div className="mt-6 border-t border-[#6f1725]/10 pt-6">
+              <p className="text-xs font-black uppercase tracking-[0.18em] text-[#8a1d2d]">
+                3Rs Model
               </p>
-              <p className="mt-2 text-base font-bold">
-                Mobilizing Ugandans to reject, resist, and report corruption.
-              </p>
+              <div className="mt-4 grid grid-cols-3 gap-3">
+                {cifacuModel.map((item) => (
+                  <span
+                    key={item}
+                    className="rounded-md bg-[#f6c84c] px-3 py-4 text-center text-sm font-black text-[#4d0e19]"
+                  >
+                    {item}
+                  </span>
+                ))}
+              </div>
             </div>
-          </div>
+          </aside>
         </div>
       </section>
 
-      <section className="bg-white py-16 sm:py-20">
-        <div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-[0.78fr_1.22fr] lg:px-8">
+      <section className="bg-white py-12 sm:py-16">
+        <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[0.72fr_1.28fr] lg:px-8">
           <div>
             <p className="text-sm font-black uppercase tracking-[0.2em] text-[#8a1d2d]">
               Purpose
@@ -112,38 +146,42 @@ export default function AboutPage() {
               A peaceful civic platform for anti-corruption action.
             </h2>
           </div>
-          <div className="space-y-5 text-base leading-8 text-[#4d4243] sm:text-lg">
-            <p>
+          <div className="grid gap-5 lg:grid-cols-3">
+            <p className="rounded-lg border border-[#6f1725]/10 bg-[#fffaf2] p-5 text-base font-semibold leading-7 text-[#4d4243] shadow-lg shadow-[#4d0e19]/6">
               The forum is open to all citizens of Uganda from diverse
               backgrounds who are committed to stamping corruption out of Uganda
               with courage, honesty, intentionality, loyalty, and legitimacy.
             </p>
-            <p>
-              CIFACU rallies citizens from a victim mentality in respect to
-              corruption to an empowered and patriotic mentality against
-              corruption. It calls on citizens to stand in the face of
-              intimidation and harassment by the corrupt, and to resist, reject,
-              and report corruption for appropriate enforcement action by
-              constitutionally mandated institutions.
+            <p className="rounded-lg border border-[#6f1725]/10 bg-[#fffaf2] p-5 text-base font-semibold leading-7 text-[#4d4243] shadow-lg shadow-[#4d0e19]/6">
+              CIFACU rallies citizens from a victim mentality to an empowered
+              and patriotic mentality that can stand against intimidation and
+              harassment by the corrupt.
             </p>
-            <p>
+            <p className="rounded-lg border border-[#6f1725]/10 bg-[#fffaf2] p-5 text-base font-semibold leading-7 text-[#4d4243] shadow-lg shadow-[#4d0e19]/6">
               CIFACU provides a peaceful forum for dialogue and civic engagement
-              against corruption in place of disruptive anti-corruption riots
-              that can leave innocent people harmed.
+              in place of disruptive anti-corruption riots that can leave
+              innocent people harmed.
             </p>
           </div>
         </div>
       </section>
 
-      <section className="bg-[#f7f8f7] py-16 sm:py-20">
+      <section className="bg-[#f7f8f7] py-12 sm:py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <p className="text-sm font-black uppercase tracking-[0.2em] text-[#8a1d2d]">
-              Open To Citizens
+          <div className="grid gap-8 lg:grid-cols-[0.72fr_1.28fr] lg:items-end">
+            <div>
+              <p className="text-sm font-black uppercase tracking-[0.2em] text-[#8a1d2d]">
+                Open To Citizens
+              </p>
+              <h2 className="mt-4 text-3xl font-black tracking-tight text-[#4d0e19] sm:text-4xl">
+                CIFACU brings together Ugandans from diverse backgrounds.
+              </h2>
+            </div>
+            <p className="max-w-2xl text-base font-semibold leading-7 text-[#5b5051]">
+              The forum welcomes citizens who are ready to protect public
+              resources, strengthen accountability, and participate in practical
+              anti-corruption action.
             </p>
-            <h2 className="mt-4 text-3xl font-black tracking-tight text-[#4d0e19] sm:text-4xl">
-              CIFACU brings together Ugandans from diverse backgrounds.
-            </h2>
           </div>
           <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {participantGroups.map((group) => (
@@ -158,7 +196,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-white py-16 sm:py-20">
+      <section className="bg-white py-12 sm:py-16">
         <div className="mx-auto grid max-w-7xl gap-6 px-4 sm:px-6 lg:grid-cols-3 lg:px-8">
           <article className="rounded-lg border border-[#6f1725]/10 bg-[#fffaf2] p-6 shadow-xl shadow-[#4d0e19]/8">
             <p className="text-sm font-black uppercase tracking-[0.18em] text-[#8a1d2d]">
@@ -179,23 +217,17 @@ export default function AboutPage() {
           </article>
           <article className="rounded-lg border border-[#6f1725]/10 bg-white p-6 shadow-xl shadow-[#4d0e19]/8">
             <p className="text-sm font-black uppercase tracking-[0.18em] text-[#8a1d2d]">
-              3Rs Model
+              Approach
             </p>
-            <div className="mt-5 grid grid-cols-3 gap-3">
-              {cifacuModel.map((item) => (
-                <span
-                  key={item}
-                  className="rounded-md bg-[#f6c84c] px-3 py-4 text-center text-sm font-black text-[#4d0e19]"
-                >
-                  {item}
-                </span>
-              ))}
-            </div>
+            <h2 className="mt-4 text-2xl font-black leading-tight text-[#211718]">
+              Peaceful dialogue, civic education, and coordinated citizen
+              action.
+            </h2>
           </article>
         </div>
       </section>
 
-      <section className="bg-[#fffaf2] py-16 sm:py-20">
+      <section className="bg-[#fffaf2] py-12 sm:py-16">
         <div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-[0.88fr_1.12fr] lg:px-8">
           <div>
             <p className="text-sm font-black uppercase tracking-[0.2em] text-[#8a1d2d]">
@@ -250,7 +282,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-white py-16 sm:py-20">
+      <section className="bg-white py-12 sm:py-16">
         <div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-[1.08fr_0.92fr] lg:px-8">
           <div>
             <p className="text-sm font-black uppercase tracking-[0.2em] text-[#8a1d2d]">
