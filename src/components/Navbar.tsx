@@ -30,7 +30,7 @@ export function Navbar() {
       >
         <Link
           href="/"
-          className="flex items-center gap-3"
+          className="flex min-w-0 items-center gap-3 lg:mr-10"
           aria-label="CITIZENS' FORUM AGAINST CORRUPTION UGANDA (CIFACU) home"
         >
           <span className="flex size-12 shrink-0 items-center justify-center overflow-hidden rounded-md border border-white/20 bg-white shadow-sm">
@@ -43,11 +43,8 @@ export function Navbar() {
               width={400}
             />
           </span>
-          <span className="flex flex-col leading-tight">
-            <span className="text-sm font-bold uppercase tracking-[0.16em] text-[#f6c84c]">
-              CIFACU
-            </span>
-            <span className="max-w-44 text-sm font-semibold text-white sm:max-w-none">
+          <span className="flex min-w-0 leading-tight">
+            <span className="max-w-52 text-sm font-semibold text-white sm:max-w-72 lg:max-w-80">
               CITIZENS&apos; FORUM AGAINST CORRUPTION UGANDA (CIFACU)
             </span>
           </span>
