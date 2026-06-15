@@ -107,7 +107,7 @@ export default function Home() {
                 Join the Movement
               </a>
               <a
-                href="#about"
+                href="/about"
                 className="inline-flex items-center justify-center rounded-md border border-[#6f1725]/18 bg-white/80 px-7 py-4 text-base font-bold text-[#6f1725] shadow-lg shadow-[#4d0e19]/8 backdrop-blur transition hover:-translate-y-0.5 hover:border-[#6f1725] hover:bg-white focus:outline-none focus:ring-2 focus:ring-[#6f1725] focus:ring-offset-2 focus:ring-offset-[#fffaf2]"
               >
                 Learn More
@@ -119,40 +119,6 @@ export default function Home() {
             <div className="relative flex w-full items-center justify-center">
               <div className="absolute inset-0 rounded-full bg-[#f6c84c]/18 blur-3xl" />
               <HeroImageCarousel />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="about" className="bg-white py-20 sm:py-28">
-        <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[0.95fr_1.05fr] lg:px-8">
-          <div>
-            <p className="text-sm font-black uppercase tracking-[0.2em] text-[#8a1d2d]">
-              Our Mandate
-            </p>
-            <h2 className="mt-4 text-3xl font-black tracking-tight text-[#211718] sm:text-5xl">
-              A constitutional duty carried by citizens.
-            </h2>
-          </div>
-          <div className="rounded-lg border border-[#8a1d2d]/10 bg-[#fffaf2] p-8 shadow-2xl shadow-[#4d0e19]/8">
-            <p className="text-lg leading-8 text-[#4d4243]">
-              CITIZENS&apos; FORUM AGAINST CORRUPTION UGANDA (CIFACU) exists to mobilize
-              citizens against corruption, misuse of public property, bribery,
-              and abuse of entrusted power. The forum is inspired by Article
-              17(1)(i) of Uganda&apos;s Constitution, which places a duty on
-              every citizen to combat corruption and misuse of public property.
-            </p>
-            <div className="mt-8 grid gap-4 sm:grid-cols-3">
-              {["Accountability", "Public Integrity", "Citizen Action"].map(
-                (item) => (
-                  <div
-                    key={item}
-                    className="rounded-md border-l-4 border-[#f6c84c] bg-white p-4 text-sm font-bold text-[#6f1725] shadow-sm"
-                  >
-                    {item}
-                  </div>
-                ),
-              )}
             </div>
           </div>
         </div>

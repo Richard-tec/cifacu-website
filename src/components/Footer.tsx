@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 
 const quickLinks = [
   { label: "Home", href: "/" },
-  { label: "About", href: "/#about" },
+  { label: "About", href: "/about" },
   { label: "Join Movement", href: "/register" },
   { label: "Activities", href: "/activities" },
   { label: "Pledge", href: "/pledge" },
