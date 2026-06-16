@@ -4,7 +4,7 @@ import Link from "next/link";
 const activities = [
   {
     category: "Workshop",
-    title: "Community Accountability Workshop",
+    title: "Community Workshops/ Barazas",
     date: "24 May 2026",
     location: "Kampala Civic Centre",
     description:

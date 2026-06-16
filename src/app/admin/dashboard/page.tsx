@@ -37,7 +37,7 @@ const registrations = [
 
 const events = [
   { title: "Youth Integrity Training", type: "Youth Training", date: "24 May" },
-  { title: "Community Accountability Workshop", type: "Workshop", date: "29 May" },
+  { title: "Community Workshops/ Barazas", type: "Workshop", date: "29 May" },
   { title: "District Coordinators Meeting", type: "Meeting", date: "02 Jun" },
 ];
 

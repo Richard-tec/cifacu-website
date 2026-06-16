@@ -11,6 +11,8 @@ const participantGroups = [
   "Students",
   "Public and private sector professionals",
   "Local leaders",
+  "Religious leaders",
+  "Cultural leaders",
   "Business community",
   "Anti-corruption agencies and organizations",
   "Patriotic citizens across Uganda",

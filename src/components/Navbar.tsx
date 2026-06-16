@@ -9,7 +9,6 @@ const menuItems = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   { label: "Activities", href: "/activities" },
-  { label: "Youth Programs", href: "/activities" },
   { label: "Pledge", href: "/pledge" },
   { label: "Contact", href: "/#contact" },
 ];

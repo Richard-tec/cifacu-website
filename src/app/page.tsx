@@ -52,7 +52,7 @@ const testimonials = [
   },
   {
     quote:
-      "The movement gives young people a disciplined way to reject bribery and demand honest service delivery.",
+      "The forum gives young people a disciplined way to reject bribery and demand honest service delivery.",
     author: "Sarah K.",
     location: "Mbarara",
   },
@@ -95,9 +95,9 @@ export default function Home() {
               CITIZENS&apos; FORUM AGAINST CORRUPTION UGANDA (CIFACU)
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-[#514648] sm:text-xl">
-              A citizen-led movement advancing accountability, protecting public
-              property, and turning Uganda&apos;s constitutional duty into
-              organized civic action.
+              A non-discriminatory, non-sectarian, intergenerational platform
+              rallying Ugandans to reject, resist, and report corruption under
+              Article 17(1)(i) of the 1995 Constitution.
             </p>
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
               <a
