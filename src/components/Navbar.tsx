@@ -22,10 +22,10 @@ export function Navbar() {
   }
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-[#6f1725]/95 text-white shadow-lg shadow-black/10 backdrop-blur-xl">
+    <header className="sticky top-0 z-50 min-w-0 border-b border-white/10 bg-[#6f1725]/95 text-white shadow-lg shadow-black/10 backdrop-blur-xl">
       <nav
         aria-label="Primary navigation"
-        className="mx-auto flex min-h-20 w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8"
+        className="mx-0 flex min-h-20 w-full min-w-0 max-w-sm items-center justify-between px-4 sm:mx-auto sm:max-w-7xl sm:px-6 lg:px-8"
       >
         <Link
           href="/"
@@ -43,7 +43,7 @@ export function Navbar() {
             />
           </span>
           <span className="flex min-w-0 leading-tight">
-            <span className="max-w-52 text-sm font-semibold text-white sm:max-w-72 lg:max-w-80">
+            <span className="max-w-44 text-sm font-semibold text-white sm:max-w-72 lg:max-w-80">
               CITIZENS&apos; FORUM AGAINST CORRUPTION UGANDA (CIFACU)
             </span>
           </span>
