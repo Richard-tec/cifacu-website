@@ -95,9 +95,11 @@ export default function Home() {
               CITIZENS&apos; FORUM AGAINST CORRUPTION UGANDA (CIFACU)
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-[#514648] sm:text-xl">
-              A non-discriminatory, non-sectarian, intergenerational platform
-              rallying Ugandans to reject, resist, and report corruption under
-              Article 17(1)(i) of the 1995 Constitution.
+              An inclusive, non-discriminatory, and non-sectarian
+              intergenerational platform that mobilizes and empowers Ugandans to
+              stand united against corruption by rejecting, resisting, and
+              reporting it, in accordance with Article 17(1)(i) of the 1995
+              Constitution of Uganda.
             </p>
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
               <a
