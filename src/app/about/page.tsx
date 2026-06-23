@@ -61,10 +61,16 @@ const aboutHighlights = [
   },
 ];
 
+const aboutLeaders = [
+  { name: "Forum Chairperson", role: "National Coordination" },
+  { name: "Secretary General", role: "Membership & Records" },
+  { name: "Programs Director", role: "Training & Campaigns" },
+];
+
 export default function AboutPage() {
   return (
     <main className="flex flex-1 flex-col bg-[#fffaf2] text-[#211718]">
-      <section className="bg-[#fffdf8] py-12 sm:py-16 lg:py-20">
+      <section id="who-we-are" className="bg-[#fffdf8] py-12 sm:py-16 lg:py-20">
         <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:px-8">
           <div>
             <p className="text-sm font-black uppercase tracking-[0.2em] text-[#8a1d2d]">
@@ -89,10 +95,10 @@ export default function AboutPage() {
                 Join the Platform
               </Link>
               <Link
-                href="/pledge"
+                href="/activities"
                 className="inline-flex items-center justify-center rounded-md border border-[#6f1725]/18 bg-white px-6 py-4 text-sm font-black uppercase tracking-[0.08em] text-[#6f1725] shadow-lg shadow-[#4d0e19]/8 transition hover:-translate-y-0.5 hover:border-[#6f1725] focus:outline-none focus:ring-2 focus:ring-[#6f1725] focus:ring-offset-2 focus:ring-offset-[#fffaf2]"
               >
-                Take the Pledge
+                View Activities
               </Link>
             </div>
           </div>
@@ -198,7 +204,43 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-white py-12 sm:py-16">
+      <section id="leadership" className="bg-[#fffaf2] py-12 sm:py-16">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl">
+            <p className="text-sm font-black uppercase tracking-[0.2em] text-[#8a1d2d]">
+              Leadership
+            </p>
+            <h2 className="mt-4 text-3xl font-black tracking-tight text-[#4d0e19] sm:text-4xl">
+              Placeholder forum leadership profiles.
+            </h2>
+            <p className="mt-5 text-base font-semibold leading-7 text-[#5b5051]">
+              Official leaders, district coordinators, and verified office
+              bearers can be added here when confirmed.
+            </p>
+          </div>
+
+          <div className="mt-10 grid gap-5 md:grid-cols-3">
+            {aboutLeaders.map((leader) => (
+              <article
+                className="rounded-lg border border-[#6f1725]/10 bg-white p-6 shadow-xl shadow-[#4d0e19]/8"
+                key={leader.name}
+              >
+                <span className="flex size-14 items-center justify-center rounded-md bg-[#6f1725] text-sm font-black text-[#f6c84c]">
+                  CF
+                </span>
+                <h3 className="mt-5 text-xl font-black text-[#211718]">
+                  {leader.name}
+                </h3>
+                <p className="mt-2 font-semibold text-[#8a1d2d]">
+                  {leader.role}
+                </p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="mission-vision" className="bg-white py-12 sm:py-16">
         <div className="mx-auto grid max-w-7xl gap-6 px-4 sm:px-6 lg:grid-cols-3 lg:px-8">
           <article className="rounded-lg border border-[#6f1725]/10 bg-[#fffaf2] p-6 shadow-xl shadow-[#4d0e19]/8">
             <p className="text-sm font-black uppercase tracking-[0.18em] text-[#8a1d2d]">
@@ -310,7 +352,10 @@ export default function AboutPage() {
             </ol>
           </div>
 
-          <aside className="rounded-lg bg-[#6f1725] p-8 text-white shadow-2xl shadow-[#4d0e19]/16">
+          <aside
+            id="core-values"
+            className="rounded-lg bg-[#6f1725] p-8 text-white shadow-2xl shadow-[#4d0e19]/16"
+          >
             <p className="text-sm font-black uppercase tracking-[0.2em] text-[#f6c84c]">
               Core Values
             </p>

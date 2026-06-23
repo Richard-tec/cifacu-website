@@ -1,48 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-
-const activities = [
-  {
-    category: "Workshop",
-    title: "Community Workshops/ Barazas",
-    date: "24 May 2026",
-    location: "Kampala Civic Centre",
-    description:
-      "A practical session on identifying corruption risks, protecting public resources, and using official reporting channels.",
-    image: "/Photo2.jpeg",
-    imagePosition: "center",
-  },
-  {
-    category: "Community Meeting",
-    title: "District Integrity Forum",
-    date: "29 May 2026",
-    location: "Gulu Municipal Hall",
-    description:
-      "Citizens, local leaders, and coordinators meet to review community concerns and strengthen public accountability.",
-    image: "/Photo4.jpeg",
-    imagePosition: "center",
-  },
-  {
-    category: "Youth Training",
-    title: "Youth Anti-Corruption Leadership Training",
-    date: "04 June 2026",
-    location: "Mbarara University Hall",
-    description:
-      "A youth-focused training on ethics, civic courage, service delivery monitoring, and refusing bribery.",
-    image: "/Photo3.jpeg",
-    imagePosition: "center 35%",
-  },
-  {
-    category: "Awareness Campaign",
-    title: "Citizen Integrity Road Campaign",
-    date: "12 June 2026",
-    location: "Jinja Main Street",
-    description:
-      "A public awareness campaign using community outreach, media engagement, and citizen pledge mobilization.",
-    image: "/Photo1.jpeg",
-    imagePosition: "center",
-  },
-];
+import { activities } from "@/lib/activities";
 
 export const metadata: Metadata = {
   title: "Activities & Events | CITIZENS' FORUM AGAINST CORRUPTION UGANDA (CIFACU)",
@@ -102,12 +59,14 @@ export default function ActivitiesPage() {
                 <p className="mt-4 leading-7 text-[#5b5051]">
                   {activity.description}
                 </p>
-                <Link
+                <a
                   className="mt-6 inline-flex rounded-md bg-[#6f1725] px-5 py-3 text-sm font-black text-white shadow-lg shadow-[#4d0e19]/12 transition hover:bg-[#4d0e19] focus:outline-none focus:ring-4 focus:ring-[#f6c84c]/50"
-                  href="/register"
+                  href={activity.googleFormUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  Register
-                </Link>
+                  Register for this Activity
+                </a>
               </div>
             </article>
           ))}
