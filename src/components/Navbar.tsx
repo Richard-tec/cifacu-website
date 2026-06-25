@@ -70,36 +70,36 @@ export function Navbar() {
 
       <nav
         aria-label="Primary navigation"
-        className="mx-auto flex min-h-24 w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8"
+        className="mx-auto flex min-h-24 w-full max-w-7xl items-center justify-between px-2 sm:px-4 lg:px-5"
       >
         <Link
           href="/"
-          className="flex min-w-0 items-center gap-3 lg:mr-6"
+          className="flex min-w-0 items-center gap-2.5 sm:gap-3 lg:-ml-3 lg:mr-4"
           aria-label="CITIZENS' FORUM AGAINST CORRUPTION UGANDA (CIFACU) home"
         >
-          <span className="flex h-16 w-32 shrink-0 items-center justify-center overflow-hidden rounded-sm border border-[#6f1725]/12 bg-white shadow-sm sm:h-[4.5rem] sm:w-40">
+          <span className="flex h-[4.5rem] w-[4.5rem] shrink-0 items-center justify-center overflow-hidden rounded-sm border border-[#6f1725]/12 bg-white shadow-sm sm:h-20 sm:w-20">
             <Image
               alt="CIFACU official logo"
-              className="h-full w-full object-contain p-1.5"
+              className="h-full w-full object-contain"
               height={400}
               priority
-              src="/New%20logo.jpeg"
+              src="/cifacu-logo-navbar.png"
               width={400}
             />
           </span>
           <span className="flex min-w-0 leading-tight">
-            <span className="max-w-48 text-sm font-black uppercase text-[#4d0e19] sm:max-w-80">
+            <span className="max-w-56 text-sm font-black uppercase text-[#4d0e19] sm:max-w-96 xl:max-w-[22rem]">
               CITIZENS&apos; FORUM AGAINST CORRUPTION UGANDA (CIFACU)
             </span>
           </span>
         </Link>
 
-        <div className="hidden items-center gap-1.5 rounded-sm border border-[#6f1725]/10 bg-[#fffaf2]/80 p-1 shadow-inner shadow-[#4d0e19]/5 xl:flex">
+        <div className="hidden items-center gap-1.5 xl:flex">
           {primaryLinks.map((item) => (
             <div className="group relative" key={item.label}>
               <Link
                 href={item.href}
-                className="flex whitespace-nowrap items-center gap-1.5 rounded-sm border border-transparent bg-transparent px-3.5 py-3 text-[0.82rem] font-black text-[#211718] transition hover:border-[#6f1725]/12 hover:bg-white hover:text-[#6f1725] hover:shadow-sm focus:outline-none focus:ring-2 focus:ring-[#f6c84c]"
+                className="flex whitespace-nowrap items-center gap-1.5 px-3.5 py-3 text-[0.82rem] font-black text-[#211718] transition hover:text-[#6f1725] focus:outline-none focus-visible:text-[#6f1725] focus-visible:underline"
               >
                 {item.label}
                 {item.children ? (
@@ -185,12 +185,12 @@ export function Navbar() {
           </div>
           {primaryLinks.map((item) => (
             <div
-              className="rounded-sm border border-[#6f1725]/10 bg-[#fffaf2]/70"
+              className="bg-[#fffaf2]/70"
               key={item.label}
             >
               <Link
                 href={item.href}
-                className="block whitespace-nowrap rounded-sm px-4 py-3 text-base font-black text-[#211718] transition hover:bg-white hover:text-[#6f1725] focus:outline-none focus:ring-2 focus:ring-[#f6c84c]"
+                className="block whitespace-nowrap px-4 py-3 text-base font-black text-[#211718] transition hover:bg-white hover:text-[#6f1725] focus:outline-none focus-visible:text-[#6f1725] focus-visible:underline"
                 onClick={() => setIsOpen(false)}
               >
                 {item.label}

@@ -31,7 +31,7 @@ export function Footer() {
   return (
     <footer className="min-w-0 bg-[#211718] text-white">
       <div className="h-2 bg-[linear-gradient(90deg,#1d1d1d_0_33%,#f6c84c_33%_66%,#9b1b30_66%_100%)]" />
-      <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-2 lg:grid-cols-[1fr_0.8fr_0.8fr_1fr] lg:px-8">
+      <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-2 lg:grid-cols-[1.45fr_0.7fr_0.7fr_0.9fr] lg:px-8">
         <FooterPartnersSlider />
 
         <section>
