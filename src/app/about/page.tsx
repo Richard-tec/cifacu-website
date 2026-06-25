@@ -61,12 +61,6 @@ const aboutHighlights = [
   },
 ];
 
-const aboutLeaders = [
-  { name: "Forum Chairperson", role: "National Coordination" },
-  { name: "Secretary General", role: "Membership & Records" },
-  { name: "Programs Director", role: "Training & Campaigns" },
-];
-
 export default function AboutPage() {
   return (
     <main className="flex flex-1 flex-col bg-[#fffaf2] text-[#211718]">
@@ -89,7 +83,7 @@ export default function AboutPage() {
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Link
-                href="/register"
+                href="/join"
                 className="inline-flex items-center justify-center rounded-md bg-[#6f1725] px-6 py-4 text-sm font-black uppercase tracking-[0.08em] text-white shadow-xl shadow-[#4d0e19]/14 transition hover:-translate-y-0.5 hover:bg-[#4d0e19] focus:outline-none focus:ring-2 focus:ring-[#f6c84c] focus:ring-offset-2 focus:ring-offset-[#fffaf2]"
               >
                 Join the Platform
@@ -199,42 +193,6 @@ export default function AboutPage() {
               >
                 {group}
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section id="leadership" className="bg-[#fffaf2] py-12 sm:py-16">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <p className="text-sm font-black uppercase tracking-[0.2em] text-[#8a1d2d]">
-              Leadership
-            </p>
-            <h2 className="mt-4 text-3xl font-black tracking-tight text-[#4d0e19] sm:text-4xl">
-              Placeholder forum leadership profiles.
-            </h2>
-            <p className="mt-5 text-base font-semibold leading-7 text-[#5b5051]">
-              Official leaders, district coordinators, and verified office
-              bearers can be added here when confirmed.
-            </p>
-          </div>
-
-          <div className="mt-10 grid gap-5 md:grid-cols-3">
-            {aboutLeaders.map((leader) => (
-              <article
-                className="rounded-lg border border-[#6f1725]/10 bg-white p-6 shadow-xl shadow-[#4d0e19]/8"
-                key={leader.name}
-              >
-                <span className="flex size-14 items-center justify-center rounded-md bg-[#6f1725] text-sm font-black text-[#f6c84c]">
-                  CF
-                </span>
-                <h3 className="mt-5 text-xl font-black text-[#211718]">
-                  {leader.name}
-                </h3>
-                <p className="mt-2 font-semibold text-[#8a1d2d]">
-                  {leader.role}
-                </p>
-              </article>
             ))}
           </div>
         </div>

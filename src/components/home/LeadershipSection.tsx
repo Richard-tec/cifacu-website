@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const leaders = Array.from({ length: 4 }, (_, index) => ({
   bio: "Short placeholder bio highlighting this leader's future profile and civic accountability work.",
   name: "Leader Name",
@@ -43,6 +45,14 @@ export function LeadershipSection() {
               </p>
             </article>
           ))}
+        </div>
+        <div className="mt-10 text-center">
+          <Link
+            href="/leadership"
+            className="inline-flex rounded-sm border border-[#6f1725]/18 bg-white px-6 py-4 text-sm font-black uppercase tracking-[0.08em] text-[#6f1725] shadow-lg shadow-[#4d0e19]/8 transition hover:border-[#6f1725] hover:text-[#4d0e19] focus:outline-none focus:ring-2 focus:ring-[#f6c84c]"
+          >
+            View Leadership
+          </Link>
         </div>
       </div>
     </section>

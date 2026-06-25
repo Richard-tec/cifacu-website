@@ -9,36 +9,36 @@ const primaryLinks = [
   { label: "Home", href: "/" },
   {
     label: "About Us",
-    href: "/#about",
+    href: "/about",
     children: [
-      { label: "Who We Are", href: "/#about" },
+      { label: "Who We Are", href: "/about#who-we-are" },
       { label: "Mission & Vision", href: "/about#mission-vision" },
-      { label: "Leadership", href: "/#leadership" },
+      { label: "Leadership", href: "/leadership" },
       { label: "Core Values", href: "/about#core-values" },
     ],
   },
   {
     label: "Activities",
-    href: "/#activities",
+    href: "/activities",
     children: [
-      { label: "Community Workshops", href: "/#activities" },
-      { label: "Youth Integrity Training", href: "/#activities" },
-      { label: "Stakeholder Meetings", href: "/#activities" },
-      { label: "Awareness Campaigns", href: "/#activities" },
+      { label: "Community Workshops", href: "/activities" },
+      { label: "Youth Integrity Training", href: "/activities" },
+      { label: "Stakeholder Meetings", href: "/activities" },
+      { label: "Awareness Campaigns", href: "/activities" },
     ],
   },
-  { label: "News & Highlights", href: "/#news" },
+  { label: "News & Highlights", href: "/news" },
   {
     label: "Resources",
-    href: "/#resources",
+    href: "/resources",
     children: [
-      { label: "Reports", href: "/#resources" },
-      { label: "Publications", href: "/#resources" },
-      { label: "Downloads", href: "/#resources" },
+      { label: "Reports", href: "/resources" },
+      { label: "Publications", href: "/resources" },
+      { label: "Downloads", href: "/resources" },
     ],
   },
-  { label: "Gallery", href: "/#gallery" },
-  { label: "Contact Us", href: "/#contact" },
+  { label: "Gallery", href: "/gallery" },
+  { label: "Contact Us", href: "/contact" },
 ];
 
 const topInfoItems = [
@@ -135,7 +135,7 @@ export function Navbar() {
         </div>
 
         <Link
-          href="/register"
+          href="/join"
           className="hidden rounded-sm bg-[#6f1725] px-5 py-3 text-sm font-black text-white shadow-sm transition hover:bg-[#4d0e19] focus:outline-none focus:ring-2 focus:ring-[#f6c84c] focus:ring-offset-2 focus:ring-offset-white xl:inline-flex"
         >
           Join the Platform
@@ -212,7 +212,7 @@ export function Navbar() {
             </div>
           ))}
           <Link
-            href="/register"
+            href="/join"
             className="mt-3 rounded-sm bg-[#6f1725] px-4 py-3 text-center text-base font-black text-white transition hover:bg-[#4d0e19] focus:outline-none focus:ring-2 focus:ring-[#f6c84c]"
             onClick={() => setIsOpen(false)}
           >

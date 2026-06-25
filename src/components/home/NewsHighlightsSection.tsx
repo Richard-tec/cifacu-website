@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const newsCards = [
   {
     title: "Upcoming update",
@@ -24,7 +26,7 @@ const newsCards = [
 
 export function NewsHighlightsSection() {
   return (
-    <section id="news" className="bg-[#f7f8f7] py-16 text-[#211718] sm:py-24">
+    <section className="bg-[#f7f8f7] py-16 text-[#211718] sm:py-24">
       {/* TODO: Connect this section to admin-managed news content later. */}
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl">
@@ -61,12 +63,12 @@ export function NewsHighlightsSection() {
                 <p className="mt-4 leading-7 text-[#5b5051]">
                   {item.description}
                 </p>
-                <a
+                <Link
                   className="mt-6 inline-flex text-sm font-black uppercase tracking-[0.08em] text-[#6f1725] transition hover:text-[#4d0e19]"
-                  href="#news"
+                  href="/news"
                 >
                   Read More
-                </a>
+                </Link>
               </div>
             </article>
           ))}

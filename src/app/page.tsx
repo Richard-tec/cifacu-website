@@ -1,4 +1,4 @@
-import { ContactEnquiryForm } from "@/components/ContactEnquiryForm";
+import Link from "next/link";
 import { HeroSlider } from "@/components/HeroSlider";
 import { AboutSection } from "@/components/home/AboutSection";
 import { ActivitiesSection } from "@/components/home/ActivitiesSection";
@@ -6,27 +6,6 @@ import { GallerySection } from "@/components/home/GallerySection";
 import { LeadershipSection } from "@/components/home/LeadershipSection";
 import { NewsHighlightsSection } from "@/components/home/NewsHighlightsSection";
 import { ResourcesSection } from "@/components/home/ResourcesSection";
-
-const contactChannels = [
-  {
-    label: "Location",
-    value: "Uganda",
-  },
-  {
-    href: "tel:+256XXXXXXXXX",
-    label: "Telephone",
-    value: "+256 XXX XXX XXX",
-  },
-  {
-    href: "mailto:info@cifacu.org",
-    label: "Email",
-    value: "info@cifacu.org",
-  },
-  {
-    label: "Working Hours",
-    value: "Mon - Fri / 8:00 - 17:00",
-  },
-];
 
 export default function Home() {
   return (
@@ -39,9 +18,9 @@ export default function Home() {
       <GallerySection />
       <LeadershipSection />
 
-      <section id="contact" className="bg-[#f7f8f7] py-16 sm:py-24">
-        <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[0.86fr_1.14fr] lg:px-8">
-          <div>
+      <section className="bg-[#f7f8f7] py-16 sm:py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl">
             <p className="text-sm font-black uppercase tracking-[0.2em] text-[#8a1d2d]">
               Contact Us
             </p>
@@ -53,34 +32,13 @@ export default function Home() {
               coordination, program partnerships, media enquiries, or civic
               accountability concerns.
             </p>
-
-            <div className="mt-8 grid gap-4 sm:grid-cols-2">
-              {contactChannels.map((channel) => (
-                <div
-                  className="rounded-sm border border-[#6f1725]/10 bg-white p-5 shadow-lg shadow-[#4d0e19]/8"
-                  key={channel.label}
-                >
-                  <p className="text-xs font-black uppercase tracking-[0.18em] text-[#8a1d2d]">
-                    {channel.label}
-                  </p>
-                  {channel.href ? (
-                    <a
-                      className="mt-2 block text-lg font-black text-[#211718] transition hover:text-[#8a1d2d]"
-                      href={channel.href}
-                    >
-                      {channel.value}
-                    </a>
-                  ) : (
-                    <p className="mt-2 text-lg font-black text-[#211718]">
-                      {channel.value}
-                    </p>
-                  )}
-                </div>
-              ))}
-            </div>
+            <Link
+              href="/contact"
+              className="mt-8 inline-flex rounded-sm bg-[#6f1725] px-6 py-4 text-sm font-black uppercase tracking-[0.08em] text-white shadow-xl shadow-[#4d0e19]/14 transition hover:bg-[#4d0e19] focus:outline-none focus:ring-2 focus:ring-[#f6c84c] focus:ring-offset-2 focus:ring-offset-[#f7f8f7]"
+            >
+              Contact CIFACU
+            </Link>
           </div>
-
-          <ContactEnquiryForm />
         </div>
       </section>
     </main>

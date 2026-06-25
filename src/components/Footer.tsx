@@ -6,19 +6,19 @@ import { usePathname } from "next/navigation";
 
 const quickLinks = [
   { label: "Home", href: "/" },
-  { label: "About Us", href: "/#about" },
-  { label: "Activities", href: "/#activities" },
-  { label: "News & Highlights", href: "/#news" },
-  { label: "Resources", href: "/#resources" },
-  { label: "Leadership", href: "/#leadership" },
-  { label: "Contact Us", href: "/#contact" },
+  { label: "About Us", href: "/about" },
+  { label: "Activities", href: "/activities" },
+  { label: "News & Highlights", href: "/news" },
+  { label: "Resources", href: "/resources" },
+  { label: "Leadership", href: "/leadership" },
+  { label: "Contact Us", href: "/contact" },
 ];
 
 const resourceLinks = [
-  { label: "Reports", href: "/#resources" },
-  { label: "Publications", href: "/#resources" },
-  { label: "Downloads", href: "/#resources" },
-  { label: "Gallery", href: "/#gallery" },
+  { label: "Reports", href: "/resources" },
+  { label: "Publications", href: "/resources" },
+  { label: "Downloads", href: "/resources" },
+  { label: "Gallery", href: "/gallery" },
 ];
 
 export function Footer() {

@@ -74,7 +74,7 @@ export function HeroSlider() {
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Link
-              href="/register"
+              href="/join"
               className="inline-flex items-center justify-center rounded-sm bg-[#f6c84c] px-6 py-4 text-sm font-black uppercase tracking-[0.08em] text-[#4d0e19] shadow-xl shadow-black/20 transition hover:bg-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#211718]"
             >
               Join the Platform

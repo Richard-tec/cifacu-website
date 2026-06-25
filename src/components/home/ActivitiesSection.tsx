@@ -1,9 +1,12 @@
 import Image from "next/image";
+import Link from "next/link";
 import { activities } from "@/lib/activities";
 
 export function ActivitiesSection() {
+  const previewActivities = activities.slice(0, 3);
+
   return (
-    <section id="activities" className="bg-white py-16 text-[#211718] sm:py-24">
+    <section className="bg-white py-16 text-[#211718] sm:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
           <div className="max-w-3xl">
@@ -21,7 +24,7 @@ export function ActivitiesSection() {
         </div>
 
         <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-          {activities.map((activity) => (
+          {previewActivities.map((activity) => (
             <article
               className="group flex h-full flex-col overflow-hidden rounded-sm border border-[#6f1725]/10 bg-[#fffaf2] shadow-xl shadow-[#4d0e19]/8 transition hover:-translate-y-1 hover:shadow-2xl hover:shadow-[#4d0e19]/14"
               key={activity.title}
@@ -47,17 +50,23 @@ export function ActivitiesSection() {
                 <p className="mt-4 flex-1 leading-7 text-[#5b5051]">
                   {activity.description}
                 </p>
-                <a
+                <Link
                   className="mt-6 inline-flex items-center justify-center rounded-sm bg-[#6f1725] px-5 py-3 text-center text-sm font-black text-white shadow-lg shadow-[#4d0e19]/12 transition hover:bg-[#4d0e19] focus:outline-none focus:ring-4 focus:ring-[#f6c84c]/50"
-                  href={activity.googleFormUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="/activities"
                 >
-                  Register for this Activity
-                </a>
+                  View Activity Details
+                </Link>
               </div>
             </article>
           ))}
+        </div>
+        <div className="mt-10 text-center">
+          <Link
+            href="/activities"
+            className="inline-flex rounded-sm border border-[#6f1725]/18 bg-white px-6 py-4 text-sm font-black uppercase tracking-[0.08em] text-[#6f1725] shadow-lg shadow-[#4d0e19]/8 transition hover:border-[#6f1725] hover:text-[#4d0e19] focus:outline-none focus:ring-2 focus:ring-[#f6c84c]"
+          >
+            View All Activities
+          </Link>
         </div>
       </div>
     </section>

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const galleryItems = [
   { src: "/Photo1.jpeg", title: "Community engagement" },
@@ -9,7 +10,7 @@ const galleryItems = [
 
 export function GallerySection() {
   return (
-    <section id="gallery" className="bg-[#fffaf2] py-16 text-[#211718] sm:py-24">
+    <section className="bg-[#fffaf2] py-16 text-[#211718] sm:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl">
           <p className="text-sm font-black uppercase tracking-[0.2em] text-[#8a1d2d]">
@@ -44,6 +45,14 @@ export function GallerySection() {
               </div>
             </article>
           ))}
+        </div>
+        <div className="mt-10 text-center">
+          <Link
+            href="/gallery"
+            className="inline-flex rounded-sm bg-[#6f1725] px-6 py-4 text-sm font-black uppercase tracking-[0.08em] text-white shadow-xl shadow-[#4d0e19]/14 transition hover:bg-[#4d0e19] focus:outline-none focus:ring-2 focus:ring-[#f6c84c]"
+          >
+            View Full Gallery
+          </Link>
         </div>
       </div>
     </section>

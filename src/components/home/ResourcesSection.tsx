@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const resources = [
   {
     code: "AR",
@@ -27,7 +29,7 @@ const resources = [
 
 export function ResourcesSection() {
   return (
-    <section id="resources" className="bg-white py-16 text-[#211718] sm:py-24">
+    <section className="bg-white py-16 text-[#211718] sm:py-24">
       {/* TODO: Connect resources to admin-managed uploads later. */}
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
@@ -60,13 +62,12 @@ export function ResourcesSection() {
               <p className="mt-4 leading-7 text-[#5b5051]">
                 {item.description}
               </p>
-              <button
-                className="mt-6 inline-flex cursor-not-allowed rounded-sm border border-[#6f1725]/18 bg-white px-5 py-3 text-sm font-black uppercase tracking-[0.08em] text-[#6f1725]/55"
-                disabled
-                type="button"
+              <Link
+                className="mt-6 inline-flex rounded-sm border border-[#6f1725]/18 bg-white px-5 py-3 text-sm font-black uppercase tracking-[0.08em] text-[#6f1725] transition hover:border-[#6f1725] hover:text-[#4d0e19]"
+                href="/resources"
               >
-                Download
-              </button>
+                View Resources
+              </Link>
             </article>
           ))}
         </div>
