@@ -13,7 +13,7 @@ const primaryLinks = [
     children: [
       { label: "Who We Are", href: "/#about" },
       { label: "Mission & Vision", href: "/about#mission-vision" },
-      { label: "Leadership", href: "/about#leadership" },
+      { label: "Leadership", href: "/#leadership" },
       { label: "Core Values", href: "/about#core-values" },
     ],
   },
@@ -70,20 +70,20 @@ export function Navbar() {
 
       <nav
         aria-label="Primary navigation"
-        className="mx-auto flex min-h-20 w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8"
+        className="mx-auto flex min-h-24 w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8"
       >
         <Link
           href="/"
           className="flex min-w-0 items-center gap-3 lg:mr-6"
           aria-label="CITIZENS' FORUM AGAINST CORRUPTION UGANDA (CIFACU) home"
         >
-          <span className="flex size-14 shrink-0 items-center justify-center overflow-hidden rounded-sm border border-[#6f1725]/12 bg-white shadow-sm">
+          <span className="flex h-16 w-32 shrink-0 items-center justify-center overflow-hidden rounded-sm border border-[#6f1725]/12 bg-white shadow-sm sm:h-[4.5rem] sm:w-40">
             <Image
               alt="CIFACU official logo"
-              className="h-full w-full object-contain p-1"
+              className="h-full w-full object-contain p-1.5"
               height={400}
               priority
-              src="/logo.png"
+              src="/New%20logo.jpeg"
               width={400}
             />
           </span>

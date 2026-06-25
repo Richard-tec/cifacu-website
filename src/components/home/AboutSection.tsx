@@ -5,18 +5,6 @@ export function AboutSection() {
   return (
     <section id="about" className="bg-[#fffaf2] py-16 text-[#211718] sm:py-24">
       <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[0.95fr_1.05fr] lg:items-center lg:px-8">
-        <div className="relative overflow-hidden rounded-sm border border-[#6f1725]/10 bg-white shadow-xl shadow-[#4d0e19]/10">
-          <Image
-            alt="CIFACU community accountability activity"
-            className="aspect-[4/3] w-full object-cover"
-            height={900}
-            src="/Photo5.jpeg"
-            unoptimized
-            width={1200}
-          />
-          <div className="absolute inset-x-0 bottom-0 h-2 bg-[linear-gradient(90deg,#1d1d1d_0_33%,#f6c84c_33%_66%,#9b1b30_66%_100%)]" />
-        </div>
-
         <div>
           <p className="text-sm font-black uppercase tracking-[0.2em] text-[#8a1d2d]">
             About CIFACU
@@ -47,6 +35,18 @@ export function AboutSection() {
           >
             Read More
           </Link>
+        </div>
+
+        <div className="relative overflow-hidden rounded-sm border border-[#6f1725]/10 bg-white shadow-xl shadow-[#4d0e19]/10">
+          <Image
+            alt="CIFACU community accountability activity"
+            className="aspect-[4/3] w-full object-cover"
+            height={900}
+            src="/Photo5.jpeg"
+            unoptimized
+            width={1200}
+          />
+          <div className="absolute inset-x-0 bottom-0 h-2 bg-[linear-gradient(90deg,#1d1d1d_0_33%,#f6c84c_33%_66%,#9b1b30_66%_100%)]" />
         </div>
       </div>
     </section>

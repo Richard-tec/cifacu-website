@@ -41,7 +41,7 @@ export function HeroSlider() {
   }, [showNext]);
 
   return (
-    <section className="relative isolate min-h-[30rem] overflow-hidden bg-[#211718] text-white sm:min-h-[36rem] lg:min-h-[42rem]">
+    <section className="relative isolate min-h-[38rem] overflow-hidden bg-[#211718] text-white sm:min-h-[44rem] lg:min-h-[50rem]">
       {slides.map((slide, index) => (
         <Image
           alt={slide.alt}
@@ -60,8 +60,8 @@ export function HeroSlider() {
       <div className="absolute inset-0 z-10 bg-[linear-gradient(90deg,rgba(33,23,24,0.86)_0%,rgba(33,23,24,0.62)_48%,rgba(33,23,24,0.26)_100%)]" />
       <div className="absolute inset-x-0 bottom-0 z-20 h-2 bg-[linear-gradient(90deg,#1d1d1d_0_33%,#f6c84c_33%_66%,#9b1b30_66%_100%)]" />
 
-      <div className="relative z-30 mx-auto flex min-h-[30rem] max-w-7xl items-center px-4 py-16 sm:min-h-[36rem] sm:px-6 lg:min-h-[42rem] lg:px-8">
-        <div className="max-w-3xl">
+      <div className="relative z-30 mx-auto flex min-h-[38rem] max-w-7xl items-start px-4 pb-24 pt-20 sm:min-h-[44rem] sm:px-6 sm:pb-28 sm:pt-24 lg:min-h-[50rem] lg:px-8 lg:pb-32 lg:pt-32">
+        <div className="max-w-3xl lg:mt-4">
           <p className="inline-flex rounded-sm bg-[#f6c84c] px-4 py-2 text-xs font-black uppercase tracking-[0.18em] text-[#4d0e19]">
             Public integrity and civic accountability
           </p>

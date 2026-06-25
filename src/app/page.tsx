@@ -3,10 +3,9 @@ import { HeroSlider } from "@/components/HeroSlider";
 import { AboutSection } from "@/components/home/AboutSection";
 import { ActivitiesSection } from "@/components/home/ActivitiesSection";
 import { GallerySection } from "@/components/home/GallerySection";
+import { LeadershipSection } from "@/components/home/LeadershipSection";
 import { NewsHighlightsSection } from "@/components/home/NewsHighlightsSection";
-import { PartnersSection } from "@/components/home/PartnersSection";
 import { ResourcesSection } from "@/components/home/ResourcesSection";
-import { StatsSection } from "@/components/home/StatsSection";
 
 const contactChannels = [
   {
@@ -33,13 +32,12 @@ export default function Home() {
   return (
     <main className="flex flex-1 flex-col overflow-hidden bg-[#fffaf2] text-[#211718]">
       <HeroSlider />
-      <StatsSection />
       <AboutSection />
       <ActivitiesSection />
       <NewsHighlightsSection />
       <ResourcesSection />
       <GallerySection />
-      <PartnersSection />
+      <LeadershipSection />
 
       <section id="contact" className="bg-[#f7f8f7] py-16 sm:py-24">
         <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[0.86fr_1.14fr] lg:px-8">

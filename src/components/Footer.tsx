@@ -1,5 +1,6 @@
 "use client";
 
+import { FooterPartnersSlider } from "@/components/FooterPartnersSlider";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -9,6 +10,7 @@ const quickLinks = [
   { label: "Activities", href: "/#activities" },
   { label: "News & Highlights", href: "/#news" },
   { label: "Resources", href: "/#resources" },
+  { label: "Leadership", href: "/#leadership" },
   { label: "Contact Us", href: "/#contact" },
 ];
 
@@ -29,27 +31,8 @@ export function Footer() {
   return (
     <footer className="min-w-0 bg-[#211718] text-white">
       <div className="h-2 bg-[linear-gradient(90deg,#1d1d1d_0_33%,#f6c84c_33%_66%,#9b1b30_66%_100%)]" />
-      <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-2 lg:grid-cols-[1.3fr_0.75fr_0.75fr_1fr] lg:px-8">
-        <section>
-          <div className="flex items-center gap-3">
-            <span className="flex size-12 items-center justify-center overflow-hidden rounded-sm bg-white">
-              <span className="text-sm font-black text-[#6f1725]">CF</span>
-            </span>
-            <div>
-              <p className="text-sm font-black uppercase tracking-[0.18em] text-[#f6c84c]">
-                CIFACU
-              </p>
-              <h2 className="text-lg font-black">
-                CITIZENS&apos; FORUM AGAINST CORRUPTION UGANDA (CIFACU)
-              </h2>
-            </div>
-          </div>
-          <p className="mt-5 max-w-md leading-7 text-white/72">
-            CIFACU mobilizes citizens to promote public integrity, reject
-            corruption, and participate in accountable civic action across
-            Uganda.
-          </p>
-        </section>
+      <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-2 lg:grid-cols-[1fr_0.8fr_0.8fr_1fr] lg:px-8">
+        <FooterPartnersSlider />
 
         <section>
           <h3 className="font-black text-[#f6c84c]">Quick Links</h3>
